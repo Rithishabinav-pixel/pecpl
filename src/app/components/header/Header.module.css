@@ -1,0 +1,454 @@
+#header {
+    position: relative;
+    padding: 12px 0;
+    background-color: white;
+    z-index: 99;
+}
+
+
+.logo{
+    width: 245px;
+    display: flex;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+
+#header .container,
+#header .container nav ul#main_menu,
+#header .container nav ul#main_menu li .subMenu{
+    display: flex;
+}
+
+#header .container,
+#header .container nav ul#main_menu{
+    align-items: center;
+}
+
+
+#header .container nav{
+    margin-left: auto;
+}
+
+#header .container nav a{
+    color: black;
+    font-weight: 600;
+}
+
+#header .container,
+#header .container nav ul#main_menu{
+    gap: 24px;
+}
+
+#header .container nav ul#main_menu li:has(.subMenu){
+    padding-right: 20px;
+    position: relative;
+}
+
+
+
+#header .container nav ul#main_menu>li>a{
+    padding: 20px 0;
+    display: flex;
+}
+
+#header .container nav ul#main_menu li,
+#header .container nav ul#main_menu li li a{
+    position: relative;
+}
+
+
+#header .container nav ul#main_menu li .subMenu,
+#header .container nav ul#main_menu li .subMenu .subMenu.secondarySubMenu{
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateY(20px);
+    padding: 10px;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 300px;
+    transition: 0.3s all;
+}
+
+#header .container nav ul#main_menu li:has(.subMenu)::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-image: url("/assets/images/menu-arrow.svg");
+    background-size: cover;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#header .container nav ul#main_menu li .subMenu:has(.subMenu) li::before{
+    transform: translateY(-50%) rotate(-90deg);
+    right: 10px;
+}
+
+#header .container nav ul#main_menu li .subMenu:has(.subMenu) li:hover::before{
+    filter: invert(1) brightness(100);
+}
+
+
+#header .container nav ul#main_menu>li:hover .subMenu{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+#header .container nav ul#main_menu li .subMenu li:hover .subMenu li{
+    visibility: visible;
+    opacity: 1;
+}
+
+#header .container nav ul#main_menu li .subMenu li,
+#header .container nav ul#main_menu li .subMenu li a{
+    width: 100%;
+}
+
+#header .container nav ul#main_menu li .subMenu a{
+        padding: 10px 10px 10px 10px;
+        text-align: left;
+        display: flex;
+}
+
+#header .container nav ul#main_menu li .subMenu  li{
+    transition: 0.3s all;
+}
+
+
+
+
+#header .container nav ul#main_menu li .subMenu li:hover{
+    background-color: var(--dark-blue);
+}
+
+
+#header .container nav ul#main_menu li .subMenu>li:hover>a{
+    color: white;
+}
+
+.menuToggle{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menuToggle span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s all;
+}
+
+.menuToggle.active span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menuToggle.active span:nth-child(2){
+    opacity: 0;
+}
+
+.menuToggle.active span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.menuClose{
+    display: none;
+}
+
+.fixed_goldenJubilee{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+      height: calc(100% - 10px);
+    width: auto;
+}
+
+.fixed_goldenJubilee img{
+     height: 100%;
+    width: auto;
+}
+
+
+@media screen and (max-width:1700px) {
+    
+    .header_btn{
+        margin-right: 7vw;
+    }
+
+}
+
+
+
+@media screen and (max-width:1366px) {
+    
+    .header_btn{
+        margin-right: 7vw;
+    }
+
+    #header .container nav ul#main_menu{
+        gap: 16px;
+    }
+
+    .logo{
+    width: 195px;
+}
+
+}
+
+
+
+/* desktop: second-level (nested) submenu should open to the right of its parent item */
+@media screen and (min-width:1201px) {
+
+    #header .container nav ul#main_menu li .subMenu .subMenu.secondarySubMenu{
+        top: 0;
+        left: 100%;
+        transform: translateX(20px);
+    }
+
+    #header .container nav ul#main_menu li .subMenu li:hover > .subMenu.secondarySubMenu,
+    #header .container nav ul#main_menu li .subMenu .subMenu.secondarySubMenu:hover{
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .fixed_goldenJubilee{
+      height: calc(100% - 20px);
+}
+
+    #header .container nav ul#main_menu li .subMenu li:hover{
+    background-color: transparent;
+}
+
+    #header .container nav ul#main_menu li .subMenu li:hover a{
+    color: black;
+}
+
+    #header .container nav ul#main_menu li .subMenu,
+#header .container nav ul#main_menu li .subMenu .subMenu.secondarySubMenu li{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    padding: 0;
+}
+
+/* the base (desktop) rule targets ".subMenu .subMenu.secondarySubMenu" directly with
+   an extra class in the selector, which out-specifies the generic ".subMenu" /
+   ".subMenu .subMenu" resets above, so the nested submenu itself kept the desktop
+   position:absolute/visibility:hidden/opacity:0/translateY(20px) on mobile even
+   though its own <li> was active. Re-declare with the same selector so this wins
+   on specificity and the nested list can actually become visible. */
+#header .container nav ul#main_menu li .subMenu .subMenu.secondarySubMenu{
+    position: relative;
+    top: auto;
+    left: 20px;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+}
+
+#header .container nav ul#main_menu li .subMenu{
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease;
+    padding-left: 20px;
+}
+
+#header .container nav ul#main_menu li .subMenu .subMenu{
+    position: relative;
+    left: 20px;
+    padding-left: 0;
+}
+
+#header .container nav ul#main_menu li .subMenu a{
+    font-size: 14px;
+    line-height: 22px;
+    padding: 8px 20px !important;
+}
+
+
+#header .container nav ul#main_menu li.active>.subMenu{
+    max-height: 1000px;
+    overflow: visible;
+}
+
+    #header .container nav ul#main_menu{
+        gap: 0;
+    }
+
+
+    #header .container nav ul#main_menu li:has(.subMenu){
+        padding-right: 0;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #header .container nav ul#main_menu li:has(.subMenu) .viewMore{
+        position: absolute;
+        right: 20px;
+        top: 8px;
+        display: grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        background: none;
+        border: none;
+    }
+
+    #header .container nav ul#main_menu li:has(.subMenu) .subMenu .viewMore{
+width: 20px;
+        height: 20px;
+          right: 40px;
+    }
+
+        #header .container nav ul#main_menu li:has(.subMenu) .viewMore img{
+            width: 70%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        #header .container nav ul#main_menu li.active>.viewMore img{
+            transform: rotate(45deg);
+        }
+
+    #header .container nav ul#main_menu li:has(.subMenu)::before{
+        display: none;
+    }
+    
+    .header_btn{
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+ #header .container{
+    position: relative;
+    z-index: 999;
+ }
+
+    #header .container nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 90%;
+        max-width: 300px;
+        padding: 50px 0 0 0;
+        background-color: white;
+        z-index: 999;
+    }
+
+     #header .container nav ul{
+        flex-direction: column;
+        z-index: 99;
+        background-color: white;
+        padding-right: 0;
+     }
+
+     #header .container nav ul li,
+     #header .container nav ul li a{
+        width: 100%;
+     }
+
+     #header .container nav ul li a{
+        padding: 12px 20px !important;
+     }
+
+    .logo{
+    width: 195px;
+}
+
+    #header{
+        overflow-x: hidden;
+    }
+
+    #header .container{
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .menuToggle{
+        display: flex;
+        margin-right: 8vw;
+    }
+
+    #header .container nav{
+        height: 100vh;
+        height: 100dvh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    }
+
+    #header .container nav.navOpen{
+        transform: translateX(0);
+    }
+
+    .menuClose{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+    .header_btn{
+       display: none;
+    }
+
+      .logo{
+    width: 180px;
+}
+
+ .menuToggle{
+        margin-right: 15vw;
+        margin-left: auto;
+    }
+    
+}

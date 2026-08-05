@@ -1,0 +1,388 @@
+.heroSection{
+    background-color: #002432;
+    padding: 100px 0 450px 0;
+    background-image: url("/assets/images/contact-us-bg.jpg");
+    background-size: 90%;
+    background-position: center 75px;
+    background-repeat: no-repeat;
+}
+
+.heroSection .content{
+width: 100%;
+max-width: 1200px;
+margin: auto;
+padding: 30px;
+background-color: rgba(0, 0, 0, 0.3);
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+border-radius: 8px;
+}
+
+.heroSection .content h1{
+    font-size: 56px;
+    line-height: 64px
+}
+
+.heroContainer .content h1,
+.heroContainer .content p,
+.contact_details .single .detail h3,
+.contact_details .single .detail a,
+.contact_details .single .detail p{
+    color: white;
+}
+
+.heroContainer .content h1,
+.heroContainer .content>p{
+    text-align: center;
+}
+
+.heroContainer .content p {
+    width: 100%;
+    max-width: 750px;
+}
+
+.contact_details{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact_details .single{
+    width: calc(25% - 22.5px);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact_details .single .icon img,
+.contact_details .single .detail ul li a img{
+    width: 30px;
+    height: auto;
+    float: left;
+}
+
+.contact_details .single .detail{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+text-align: left;
+}
+
+.contact_details .single .detail h3{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.contact_details .single .detail a:hover{
+    color: var(--light-blue);
+}
+
+.contact_details .single .detail ul{
+    display: flex;
+    gap: 16px;
+}
+.contact_details .single .detail ul li a{
+    display: block;
+}
+
+.contact_details .single .detail ul li a:hover{
+    transform: scale(0.95);
+}
+
+.formSection{
+    margin-top: -250px;
+}
+
+.formContainer{
+    max-width: 1000px;
+    background-color: var(--gray);
+    padding: 50px;
+    border-radius: 8px;
+}
+
+
+
+.formSection form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.formControl{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc(50% - 15px);
+}
+
+.formControl.fullWidth{
+    width: 100%;
+}
+
+.formControl input,
+.formControl textarea{
+    background: white;
+    border: none;
+    min-height: 5px;
+    border-radius: 4px;
+    padding: 16px 20px;
+    border: solid white 1px;
+
+}
+
+.formControl input:focus,
+.formControl textarea:focus{
+    border: solid var(--dark-blue) 1px;
+    outline: none;
+}
+
+.formControl textarea{
+    height: 200px;
+    resize: none;
+}
+
+.captcha{
+    width: 100%;
+  
+}
+
+.captcha div{
+    width: 100%;
+    max-width: 550px;
+      padding: 16px;
+    border: solid black 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 16px 8px;
+    align-items: center;
+    margin: auto;
+}
+
+.captcha p{
+    width: 100%;
+}
+
+.captcha p.error{
+    color: red;
+}
+
+.captcha input {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: #000;
+    appearance: textfield;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.formSection form button{
+    background-color: var(--light-blue);
+}
+
+.captcha input:read-only{
+
+}
+
+.captcha input::-webkit-outer-spin-button,
+.captcha input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.locationCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.locationCards .card{
+width: calc(33.33% - 20px);
+background-color: var(--gray);
+padding: 30px;
+border-radius: 8px;
+}
+
+.locationCards .card,
+.locationCards .card .locationDetails,
+.locationCards .phones{
+gap: 16px;
+}
+
+.locationCards .card .locationDetails{
+height: 100%;
+}
+
+.locationCards .card,
+.locationCards .card .locationDetails,
+.locationCards .phones{
+display: flex;
+flex-direction: column;
+}
+
+
+.locationCards .card .name,
+.locationCards .card p,
+.locationCards .card a{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.locationCards .card .locationDetails a:not(:global(.light_blue)){
+color: var(--light-blue);
+}
+
+.locationCards .card .name{
+    padding-bottom: 20px;
+    border-bottom: solid rgba(0, 0, 0, 0.2) 1px;
+}
+
+.viewLocation{
+   margin-top: auto;
+}
+
+.locationCards .card .email,
+.locationCards .card .phone,
+.locationCards .card .fax,
+.locationCards .card .landline,
+.locationCards .card .website{
+    position: relative;
+    padding-left: 28px;
+}
+
+.locationCards .card .email::before,
+.locationCards .card .phone::before,
+.locationCards .card .fax::before,
+.locationCards .card .landline::before,
+.locationCards .card .website::before{
+   position: absolute;
+    content: '';
+    background-size: auto 100%;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.locationCards .card .email::before{
+    background-image: url('/assets/images/c-mail.svg');
+}
+
+.locationCards .card .phone::before{
+    background-image: url('/assets/images/c-phone.svg');
+}
+
+.locationCards .card .fax::before{
+    background-image: url('/assets/images/c-fax.svg');
+}
+
+.locationCards .card .landline::before{
+    background-image: url('/assets/images/c-landline.svg');
+}
+
+.locationCards .card .website::before{
+    background-image: url('/assets/images/website.svg');
+}
+
+
+@media screen and (min-width:1200px) {
+
+.formSection h2{
+    font-size:32px;
+    line-height: 40px;
+}
+
+
+}
+/* responsive  */
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+
+     .heroSection{
+        padding: 50px 0;
+     }
+
+    .heroSection .content h1{
+    font-size: 34px;
+    line-height: 42px
+}
+.contact_details{
+    flex-wrap: wrap;
+}
+
+.formContainer{
+    width: 100%;
+}
+
+.contact_details .single{
+    width: calc(50% - 15px);
+}
+
+.formSection:global(.no_padding_top){
+    margin-top: 0px;
+    padding: 50px 20px;
+    margin-top: 50px;
+}
+
+.locationCards{
+    gap: 20px;
+}
+
+.locationCards .card{
+width: calc(50% - 10px);
+padding: 20px;
+}
+
+.locationCards{
+    justify-content: flex-start;
+}
+
+
+}
+
+
+/* mobile  */
+
+@media screen and (max-width:767px){
+.contact_details .single{
+    width: 100%;
+}
+
+
+.formContainer{
+    padding: 20px;
+}
+
+
+
+.formSection form{
+    gap: 20px;
+}
+
+.formControl{
+    width: 100%;
+}
+
+.locationCards .card{
+width: 100%;
+}
+
+}

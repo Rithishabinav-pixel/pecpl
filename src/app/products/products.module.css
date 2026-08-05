@@ -1,0 +1,300 @@
+.hero_section{
+    min-height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero_section::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+        background-color: transparent;
+    background-image: linear-gradient(90deg, #002B3B 32%, #00000014 65%);
+    opacity: 0.9;
+}
+
+.heroContainer{
+    position: relative;
+    z-index: 2;
+}
+
+.heroContainer h1{
+    color: white;
+}
+
+.overviewSection{
+    background-color: var(--gray);
+}
+
+.overviewSection .container{
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+
+.products_section.reverse{
+    background-color: var(--gray);
+}
+
+
+.products_section.reverse .container{
+    flex-direction: row-reverse;
+}
+
+
+.products_section .container,
+.technicalSection .container,
+.pheSection .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px 80px;
+}
+
+
+.products_section .container .image,
+.products_section .container .content{
+    width: calc(50% - 40px);
+}
+
+.products_section .container .additionalText{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.products_section .container .image .imageSlide{
+    position: relative;
+    height: 100%;
+    display: flex;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.products_section .container .image .imageSlide::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+        background-image: linear-gradient(180deg, #FFFFFF26 26%, #000000 100%);
+}
+
+.products_section .container .image .imageSlide p{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 99;
+    color: white;
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 600;
+}
+
+.products_section .container .image img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.products_section .container .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.products_section .container .content h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-style: italic;
+    color: #1F4E5F;
+}
+
+.technicalSection .container,
+.pheSection .container{
+    row-gap: 40px;
+}
+
+.technicalSection .container h2,
+.pheSection .container h2{
+    width: 100%;
+}
+
+.pheSection .container h2{
+    text-align: center;
+}
+
+.technicalSection .container .technicalChart{
+    width: calc(50% - 40px);
+}
+
+.technicalSection .container .technicalImage{
+        width: calc(50% - 40px);
+
+}
+
+.technicalSection .container .technicalChart img,
+.technicalSection .container .technicalImage img{
+    width: 100%;
+    height: auto;
+}
+
+.technicalSection .container .technicalImage img{
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.pheSection .container .pheContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    border: solid var(--dark-blue) 2px;
+    border-radius: 4px;
+}
+
+.pheSection .container .pheContainer .image{
+    width: 40%;
+}
+
+.pheSection .container .pheContainer .image img{
+    width: 100%;
+    height: auto;
+}
+
+.pheSection .container .pheContainer  .content{
+    width: 60%;
+    padding: 20px;
+    background-color: var(--dark-blue);
+display: flex;
+flex-direction: column;
+gap: 20px;
+justify-content: center;
+}
+
+.pheSection .container .pheContainer  .content ul{
+    display: flex;
+flex-direction: column;
+gap: 20px
+}
+
+.pheSection .container .pheContainer  .content ul li{
+    color: white;
+    position: relative;
+    padding-left: 34px;
+}
+
+.pheSection .container .pheContainer  .content ul li::before{
+    position: absolute;
+    content: '';
+    height: 24px;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    top: 0px;
+    left: 0;
+    background-image: url(/assets/images/check-tick-white.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.pheSection .container .pheContainer  .content h3{
+    color: white;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.industrialExcellence .industrialExcellenceCards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.industrialExcellence .industrialExcellenceCards .card h3{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.industrialExcellence .industrialExcellenceCards .card{
+  background-color: var(--dark-blue);
+      border-radius: 8px 8px 8px 8px;
+    padding: 20px 20px 20px 20px;
+      display: flex;
+  flex-direction: column;
+    width: calc(20% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.industrialExcellence .industrialExcellenceCards .card h3,
+.industrialExcellence .industrialExcellenceCards .card p{
+    color: white;
+    text-align: center;
+}
+
+.industrialExcellence .industrialExcellenceCards .card,
+.industrialExcellence .industrialExcellenceCards .card img{
+    transition: 0.3s all;
+}
+
+.industrialExcellence .industrialExcellenceCards .card:hover{
+  background-color: var(--light-blue);
+}
+
+.industrialExcellence .industrialExcellenceCards .card:hover img{
+  transform: scaleX(-1);
+}
+
+
+/* responsive  */
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+
+    .products_section .container .additionalText{
+    margin-top:0px;
+}
+
+    
+    .products_section .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+     .products_section .container .image{
+        margin-bottom: 10px
+     }
+
+    .products_section .container .image,
+.products_section .container .content{
+    width: 100%;
+}
+
+.products_section .container .content h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.products_section .container .content,
+  .products_section .container .additionalText{
+    gap: 16px;
+}
+
+
+    
+}

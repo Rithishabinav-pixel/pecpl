@@ -1,0 +1,490 @@
+.heroSection{
+    background-image: url('/assets/images/about-bg-bnr-nw.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.heroSection::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background:  linear-gradient(90deg, #002B3B 32%, #00000014 100%);
+    opacity: 0.9;
+}
+
+
+.heroContainer .content{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+max-width: 700px;
+position: relative;
+z-index: 2;
+}
+
+.heroContainer .content h1,
+.heroContainer .content p{
+    color: white;
+}
+
+.heroContainer .content h1{
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.aboutContainer,
+.misvisContainer{
+    display: flex;
+}
+
+.aboutContainer{
+    gap: 100px;
+}
+
+.misvisContainer{
+    gap: 50px;
+}
+
+.aboutContainer .image,
+.aboutContainer .content{
+    width: calc(50% - 50px);
+}
+
+
+.aboutContainer .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+    border-radius: 8px;
+}
+
+.aboutContainer .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.misvisContainer .card{
+    width: calc(50% - 25px);
+    min-height: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.misvisContainer .card h3,
+.misvisContainer .card p{
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.misvisContainer .card h3{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.misvisContainer .card p{
+    font-size: 26px;
+    line-height: 34px;
+}
+
+.whyChooseSection .whyChooseCards .card{
+    background-color: var(--dark-blue);
+     border-radius: 8px 8px 8px 8px;
+    padding: 20px 20px 20px 20px;
+}
+
+.whyChooseSection .whyChooseCards,
+.leadershipSection .leadershipCards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.whyChooseSection .whyChooseCards .card h3,
+.whyChooseSection .whyChooseCards .card p{
+  color: white;
+}
+
+.whyChooseSection .whyChooseCards .card h3,
+.leadershipSection .leadershipCards .card h3,
+.leaderPopupContainer .content h3{
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.whyChooseSection .whyChooseCards .card,
+.leadershipSection .leadershipCards .card{
+    width: calc(25% - 20px);
+    
+}
+
+.whyChooseSection .whyChooseCards .card,
+.leadershipSection .leadershipCards .card,
+.leaderPopupContainer .content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.whyChooseSection .whyChooseCards .card,
+.whyChooseSection .whyChooseCards .card img{
+    transition: 0.3s all;
+}
+
+.certificatesSection .whyChooseCards .card a{
+    margin-top: auto;
+}
+
+.certificatesSection .whyChooseCards .card img.icon{
+    height: 50px;
+    width: auto;
+    align-self: flex-start;
+}
+
+.whyChooseSection .whyChooseCards .card:hover{
+  background-color: var(--light-blue);
+}
+
+.whyChooseSection .whyChooseCards .card:hover img.icon{
+  transform: scaleX(-1);
+}
+
+.leadershipSection .leadershipCards .card div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.leadershipSection .leadershipCards .card div span,
+.leaderPopupContainer .content div span{
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--light-blue);
+    font-weight: 700;
+}
+
+
+.leadershipImage{
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.leaderPopupContainer{
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    display: flex;
+    padding: 16px;
+    gap: 20px;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: openPopup 0.5s forwards linear;
+}
+
+@keyframes openPopup {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    20%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.leaderPopupContainer .image{
+    width: calc(40% - 10px);
+}
+
+.leaderPopupContainer .content{
+    width: calc(60% - 10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.leaderPopupContainer .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.mapSection .mapArea{
+    width: 1170px;
+    height: auto;
+    aspect-ratio: 1170 / 640;
+    margin: auto;
+    position: relative;
+}
+
+.mapSection .mapArea .mapImg{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.mapSection .mapArea .pin{
+    position: absolute;
+    cursor: pointer;
+}
+
+.mapSection .mapArea .pin .content{
+background-color: white;
+position: absolute;
+top: -15px;
+left: 50%;
+transform: translate(-50%,-105%);
+padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 16px;
+width: 280px;
+opacity: 0;
+transition: 0.3s all;
+visibility: hidden;
+}
+
+.mapSection .mapArea .pin:hover .content{
+transform: translate(-50%,-100%);
+opacity: 1;
+visibility: visible;
+}
+
+.mapSection .mapArea .pin .content::before{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+     background-color: rgb(255, 255, 255);
+     bottom: -8px;
+     left: 50%;
+     transform: translateX(-50%);
+}
+
+.mapSection .mapArea .pin .content .icon img{
+    width: 20px;
+    height: auto;
+}
+
+.mapSection .mapArea .pin .content div{
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.mapSection .mapArea .pin button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mapSection .mapArea .pin button img{
+    width: 20px;
+    height: auto;
+    float: left;
+}
+
+.mapSection .mapArea .pin.index0{
+    top: 35%;
+    left: 20%;
+}
+
+.mapSection .mapArea .pin.index1{
+    top: 39%;
+    left: 49.8%;
+}
+
+.mapSection .mapArea .pin.index2{
+    top: 48%;
+    left: 57%;
+}
+
+.mapSection .mapArea .pin.index3{
+    top: 52%;
+    left: 58.5%;
+}
+
+.mapSection .mapArea .pin.index4{
+    top: 47%;
+    left: 60.5%;
+}
+
+.mapSection .mapArea .pin.index5{
+    top: 52%;
+    left: 61%;
+}
+
+.mapSection .mapArea .pin.index6{
+    top: 58%;
+    left: 67.8%;
+}
+
+.mapSection .mapArea .pin.index7{
+    top: 60%;
+    left: 74.5%;
+}
+
+.enlistmentsPoints{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+   
+}
+
+.enlistmentsPoints ul{
+    width: 100%;
+     display: flex;
+    flex-wrap: wrap;
+    gap: 16px 0;
+}
+
+.enlistmentsPoints li{
+    width:33.33%;
+    position: relative;
+    font-weight: 600;
+    color: var(--dark-blue);
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 32px;
+}
+
+.enlistmentsPoints li::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 5px;
+    background-image: url('/assets/images/check-tick-dark-blue.svg');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.membershipLogos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.membershipLogos .logo{
+    width: calc(20% - 24px);
+}
+
+.membershipLogos .logo img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+/* responsive  */
+
+/* tablet  */
+@media screen and (max-width:1200px){
+
+    .membershipLogos{
+    gap: 20px;
+}
+
+.membershipLogos .logo{
+    width: calc(25% - 15px);
+}
+
+    .enlistmentsPoints ul{
+        gap: 16px;
+    }
+
+    .enlistmentsPoints ul li{
+        width: calc(50% - 8px);
+    }
+
+    .misvisContainer .card{
+        width: 100%;
+    }
+
+    .aboutContainer,
+    .misvisContainer{
+    gap: 30px;
+    flex-direction: column;
+}
+
+.aboutContainer .content{
+    gap: 16px;
+}
+
+
+.aboutContainer .image,
+.aboutContainer .content{
+    width: 100%;
+}
+
+    .heroContainer .content{
+        width: 60%;
+    }
+
+    .heroContainer .content h1{
+    font-size: 24px;
+        line-height: 32px;
+}
+
+    .mapSection .mapArea{
+        width: 100%;
+    }
+
+  .whyChooseSection .whyChooseCards .card,
+   .leadershipSection .leadershipCards .card{
+    width: calc(50% - 10px);
+}
+.leadershipSection .leadershipCards .card{
+    gap:16px
+}
+
+}
+
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+    .membershipLogos .logo{
+    width: calc(50% - 10px);
+}
+
+    .enlistmentsPoints ul li{
+        width: 100%;
+    }
+
+    .misvisContainer .card{
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .misvisContainer .card p{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    
+    .heroContainer .content{
+        width: 100%;
+    }
+
+    .mapSection .mapArea .pin button img{
+    width: 10px;
+}
+  
+  .whyChooseSection .whyChooseCards .card,
+    .leadershipSection .leadershipCards .card{
+    width: 100%;
+}
+}

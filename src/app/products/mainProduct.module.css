@@ -1,0 +1,146 @@
+.hero_section{
+    min-height: 510px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero_section::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+        background-color: transparent;
+    background-image: linear-gradient(90deg, #002B3B 32%, #00000014 65%);
+    opacity: 0.9;
+}
+
+.heroContainer{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heroContainer h1,
+.heroContainer p{
+    color: white;
+}
+
+.heroContainer p{
+    width: 100%;
+    max-width: 650px;
+}
+
+
+.productsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.productsContainer .card{
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s all;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.productImage{
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.productImage img{
+    width: 100%;
+    height: auto;
+    float: left;
+    transition: 0.3s all;
+}
+
+.productsContainer .card:hover .productImage img{
+    transform: scale(1.05);
+}
+
+.productsContainer .card h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.productsContainer .card p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* responsive  */
+
+/* tablet  */
+@media screen and (max-width:1200px) {
+
+    .hero_section{
+        min-height: fit-content;
+        padding: 50px 0;
+    }
+
+    .hero_section::before{
+    background-image: linear-gradient(90deg, #002B3B 50%, #00000052 100%);
+}
+
+    .heroContainer p{
+    width: 60%;
+}
+
+.productsContainer{
+    gap: 20px;
+}
+
+.productsContainer .card{
+    width: calc(50% - 10px);
+    padding: 10px;
+    gap: 10px;
+}
+
+.productsContainer .card .productImage{
+margin-bottom: 6px;
+}
+
+    
+}
+
+
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+    .heroContainer{
+        gap: 16px;
+    }
+
+    .heroContainer p{
+        width: 100%;
+    }
+
+
+.productsContainer .card{
+    width: 100%;
+    padding: 16px;
+}
+
+.productsContainer .card .productImage{
+margin-bottom: 6px;
+}
+
+    
+}
