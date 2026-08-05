@@ -18,16 +18,8 @@ const openSans = Open_Sans({
 
 export const metadata = {
   title: "Precision Equipments | Heat Exchangers & Process Equipment Manufacturer",
-  description: "Precision Equipments (PECPL) designs and manufactures heat exchangers, pressure vessels, and critical process equipment for Oil & Gas, Petrochemical, Fertilizer, LNG, and Renewable Energy industries.",
-icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon.ico",
-  },
+  description:
+    "Precision Equipments (PECPL) designs and manufactures heat exchangers, pressure vessels, and critical process equipment for Oil & Gas, Petrochemical, Fertilizer, LNG, and Renewable Energy industries.",
 };
 
 export default function RootLayout({ children }) {

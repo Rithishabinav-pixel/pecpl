@@ -137,14 +137,16 @@ const handleSubmenuToggle = (path) => (e) => {
   </button>
   <ul id={style.main_menu}>
     <li className={isMenuActive(['about'])?`${style.active}`:""}>
-      <Link href="#">About Us</Link>
+      <Link href="/about-us">About Us</Link>
        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['about'])} aria-expanded={isMenuActive(['about'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
-          <li> <Link href="#">Company Overview</Link> </li>
-          <li> <Link href="#">Vision & Mission</Link> </li>
-          <li> <Link href="#">Leadership</Link> </li>
-          <li> <Link href="#">Accreditations & Certificates</Link> </li>
+          <li> <Link href="/about-us">Company Overview</Link> </li>
+          <li> <Link href="/about-us">Vision & Mission</Link> </li>
+          <li> <Link href="/about-us">Leadership</Link> </li>
+          <li> <Link href="/about-us">Accreditations & Certificates</Link> </li>
+          {/* TODO: missing route - no "Responsibility" page/section exists in the project yet */}
           <li> <Link href="#">Responsibility</Link> </li>
+          {/* TODO: missing route - no "Clients" page/section exists in the project yet */}
           <li> <Link href="#">Clients</Link> </li>
          </ul>
 
@@ -185,15 +187,15 @@ const handleSubmenuToggle = (path) => (e) => {
       <Link href="/industries">Industries</Link>
         {mobile &&  <button type="button" onClick={handleSubmenuToggle(['industries'])} aria-expanded={isMenuActive(['industries'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
-          <li> <Link href="#">Oil and Gas</Link> </li>
-          <li> <Link href="#">Petrochemicals</Link> </li>
-          <li> <Link href="#">Fertilizers</Link> </li>
-          <li> <Link href="#">Chemical</Link> </li>
-          <li> <Link href="#">LNG</Link> </li>
-          <li> <Link href="#">FSRU</Link> </li>
-          <li> <Link href="#">FPSO</Link> </li>
-          <li> <Link href="#">Renewable Energy</Link> </li>
-          <li> <Link href="#">Data Centre Cooling</Link> </li>
+          <li> <Link href="/industries#oil-and-gas">Oil and Gas</Link> </li>
+          <li> <Link href="/industries#petrochemicals">Petrochemicals</Link> </li>
+          <li> <Link href="/industries#fertilizers">Fertilizers</Link> </li>
+          <li> <Link href="/industries#chemicals">Chemical</Link> </li>
+          <li> <Link href="/industries#liquefied-natural-gas">LNG</Link> </li>
+          <li> <Link href="/industries#floating-storage-and-regasification-units">FSRU</Link> </li>
+          <li> <Link href="/industries#floating-production-storage-offloading">FPSO</Link> </li>
+          <li> <Link href="/industries#renewable-energy">Renewable Energy</Link> </li>
+          <li> <Link href="/industries#data-centre-cooling">Data Centre Cooling</Link> </li>
          </ul>
     </li>
 
