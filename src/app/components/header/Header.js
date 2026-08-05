@@ -201,25 +201,29 @@ const handleSubmenuToggle = (path) => (e) => {
 
 
      <li className={isMenuActive(['capability'])?`${style.active}`:""}>
+      {/* TODO: missing route - no "Capability" page/section exists in the project yet */}
       <Link href="#">Capability</Link>
         {mobile &&  <button type="button" onClick={handleSubmenuToggle(['capability'])} aria-expanded={isMenuActive(['capability'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
+          {/* TODO: missing route - no "Engineering" page/section exists in the project yet */}
           <li> <Link href="#">Engineering</Link> </li>
+          {/* TODO: missing route - no "Manufacturing" page/section exists in the project yet */}
           <li> <Link href="#">Manufacturing</Link> </li>
+          {/* TODO: missing route - no "Logistics" page/section exists in the project yet */}
           <li> <Link href="#">Logistics</Link> </li>
          </ul>
     </li>
 
 
-    <li> <Link href="#">Knowledge Centre</Link></li>
+    <li> <Link href="/knowledge-centre">Knowledge Centre</Link></li>
 
-    <li> <Link href="#">Contact Us</Link></li>
+    <li> <Link href="/contact-us">Contact Us</Link></li>
 
   </ul>
 </nav>
 
 
-<Button href={"#"} classname={`dark_blue ${style.header_btn}`} text={"Request a quote"}/>
+<Button href={"/contact-us"} classname={`dark_blue ${style.header_btn}`} text={"Request a quote"}/>
 
 <button
   ref={toggleRef}

@@ -65,15 +65,21 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
             <div className={style.menuColumn}>
                 <h3>Quick links</h3>
                 <ul>
-  <li><Link href="#">Home</Link></li>
-  <li><Link href="#">About PECPL</Link></li>
+  <li><Link href="/">Home</Link></li>
+  <li><Link href="/about-us">About PECPL</Link></li>
+  {/* TODO: missing route - no "Clients" page/section exists in the project yet */}
   <li><Link href="#">Clients</Link></li>
-  <li><Link href="#">Knowledge Centre</Link></li>
+  <li><Link href="/knowledge-centre">Knowledge Centre</Link></li>
+  {/* TODO: missing route - no "Career" page exists in the project yet */}
   <li><Link href="#">Career</Link></li>
-  <li><Link href="#">Contact Us</Link></li>
+  <li><Link href="/contact-us">Contact Us</Link></li>
+  {/* TODO: missing route - no "Capability" page/section exists in the project yet */}
   <li><Link href="#">Capability</Link></li>
+  {/* TODO: missing route - no "Engineering" page/section exists in the project yet */}
   <li><Link href="#">Engineering</Link></li>
+  {/* TODO: missing route - no "Manufacturing" page/section exists in the project yet */}
   <li><Link href="#">Manufacturing</Link></li>
+  {/* TODO: missing route - no "Logistics" page/section exists in the project yet */}
   <li><Link href="#">Logistics</Link></li>
 </ul>
             </div>
@@ -81,32 +87,32 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
             <div className={style.menuColumn}>
                 <h3>Products</h3>
                 <ul>
-  <li><Link href="#">Shell and Tube Heat Exchangers</Link></li>
-  <li><Link href="#">Rod Baffle Exchangers</Link></li>
-  <li><Link href="#">Helical Baffle Heat Exchangers</Link></li>
-  <li><Link href="#">Double Pipe Heat Exchangers</Link></li>
-  <li><Link href="#">Hairpin Heat Exchangers</Link></li>
-  <li><Link href="#">Pressure Vessels</Link></li>
-  <li><Link href="#">Columns &amp; Reactors</Link></li>
-  <li><Link href="#">Process Skid</Link></li>
-  <li><Link href="#">Plate and Shell Heat Exchangers</Link></li>
-  <li><Link href="#">Cryogenic Heat Exchangers</Link></li>
-  <li><Link href="#">Plate &amp; Frame Heat Exchanger</Link></li>
+  <li><Link href="/products/shell-and-tube-heat-exchangers">Shell and Tube Heat Exchangers</Link></li>
+  <li><Link href="/products/shell-and-tube-heat-exchangers#rod">Rod Baffle Exchangers</Link></li>
+  <li><Link href="/products/shell-and-tube-heat-exchangers#helixchanger">Helical Baffle Heat Exchangers</Link></li>
+  <li><Link href="/products/double-pipe-heat-exchangers">Double Pipe Heat Exchangers</Link></li>
+  <li><Link href="/products/hairpin-heat-exchangers">Hairpin Heat Exchangers</Link></li>
+  <li><Link href="/products/pressure-vessels">Pressure Vessels</Link></li>
+  <li><Link href="/products/columns-reactors">Columns &amp; Reactors</Link></li>
+  <li><Link href="/products/process-skid">Process Skid</Link></li>
+  <li><Link href="/products/plate-and-shell-heat-exchangers">Plate and Shell Heat Exchangers</Link></li>
+  <li><Link href="/products/shell-and-tube-heat-exchangers#cryogenic">Cryogenic Heat Exchangers</Link></li>
+  <li><Link href="/products/plate-frame-heat-exchanger">Plate &amp; Frame Heat Exchanger</Link></li>
 </ul>
             </div>
 
             <div className={style.menuColumn}>
                 <h3>Industries</h3>
                <ul>
-  <li><Link href="#">Oil and Gas</Link></li>
-  <li><Link href="#">Petrochemicals</Link></li>
-  <li><Link href="#">Fertilizers</Link></li>
-  <li><Link href="#">Chemical</Link></li>
-  <li><Link href="#">LNG</Link></li>
-  <li><Link href="#">FSRU</Link></li>
-  <li><Link href="#">FPSO</Link></li>
-  <li><Link href="#">Renewable Energy</Link></li>
-  <li><Link href="#">Data Centre Cooling</Link></li>
+  <li><Link href="/industries#oil-and-gas">Oil and Gas</Link></li>
+  <li><Link href="/industries#petrochemicals">Petrochemicals</Link></li>
+  <li><Link href="/industries#fertilizers">Fertilizers</Link></li>
+  <li><Link href="/industries#chemicals">Chemical</Link></li>
+  <li><Link href="/industries#liquefied-natural-gas">LNG</Link></li>
+  <li><Link href="/industries#floating-storage-and-regasification-units">FSRU</Link></li>
+  <li><Link href="/industries#floating-production-storage-offloading">FPSO</Link></li>
+  <li><Link href="/industries#renewable-energy">Renewable Energy</Link></li>
+  <li><Link href="/industries#data-centre-cooling">Data Centre Cooling</Link></li>
 </ul>
             </div>
 
