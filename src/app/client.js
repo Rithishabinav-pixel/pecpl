@@ -190,10 +190,10 @@ export default function Page() {
   </Swiper>
 
   <div className={style.heroSlide_navigation}>
-      <button className={`custom_prev ${style.prev}`}>
+      <button aria-label="Previous slide" className={`custom_prev ${style.prev}`}>
         <Image src="/assets/images/arrow-left.svg" width={24} height={24} alt=""/>
       </button>
-<button className={`custom_next ${style.next}`}>
+<button aria-label="Next slide" className={`custom_next ${style.next}`}>
   <Image src="/assets/images/arrow-right.svg" width={24} height={24} alt=""/>
 </button>
 </div>
