@@ -1,8 +1,22 @@
 import React from 'react'
 import style from './industries.module.css'
-import Button from '@/app/components/ui/button';
 import industriesData from '@/app/data/industries';
 import Image from 'next/image';
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  title: "Engineering Solutions for Oil, Gas, LNG Vaporizer & Energy",
+  description:
+    "Delivering specialized process equipment for Oil & Gas, LNG Vaporizer, Fertilizers, Petrochemicals, FPSO, FSRU & Renewable Energy with reliability & precision.",
+  path: "/industries",
+  keywords: [
+    "oil and gas equipment",
+    "LNG heat exchangers",
+    "petrochemical industry equipment",
+    "renewable energy heat exchangers",
+    "FPSO FSRU equipment",
+  ],
+});
 
 export default function page() {
 

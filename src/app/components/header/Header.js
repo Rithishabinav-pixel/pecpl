@@ -5,9 +5,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Button from '../ui/button'
+import RequestQuote from '../request-quote/RequestQuote'
 
 export default function Header() {
 
+  const [popup,setPopup] = useState(false);
 
   const [mobile,setMobile] = useState(false)
 
@@ -119,6 +121,7 @@ const handleSubmenuToggle = (path) => (e) => {
 };
 
   return (
+    <>
     <header id={style.header} className={fixed?"fixed":""}>
 <div className={`container ${style.container}`}>
   <Link href='/' className={style.logo}>
@@ -138,26 +141,24 @@ const handleSubmenuToggle = (path) => (e) => {
   <ul id={style.main_menu}>
     <li className={isMenuActive(['about'])?`${style.active}`:""}>
       <Link href="/about-us">About Us</Link>
-       {mobile &&  <button type="button" onClick={handleSubmenuToggle(['about'])} aria-expanded={isMenuActive(['about'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
+       {mobile &&  <button type="button" onClick={handleSubmenuToggle(['about'])} aria-expanded={isMenuActive(['about'])} aria-label="Toggle About Us submenu" className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
           <li> <Link href="/about-us">Company Overview</Link> </li>
           <li> <Link href="/about-us">Vision & Mission</Link> </li>
           <li> <Link href="/about-us">Leadership</Link> </li>
           <li> <Link href="/about-us">Accreditations & Certificates</Link> </li>
-          {/* TODO: missing route - no "Responsibility" page/section exists in the project yet */}
-          <li> <Link href="#">Responsibility</Link> </li>
-          {/* TODO: missing route - no "Clients" page/section exists in the project yet */}
-          <li> <Link href="#">Clients</Link> </li>
+          <li> <Link href="/responsibility">Responsibility</Link> </li>
+          <li> <Link href="/clients">Clients</Link> </li>
          </ul>
 
     </li>
 
     <li className={isMenuActive(['product'])?`${style.active}`:""}>
       <Link href="/products">Products</Link>
-        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['product'])} aria-expanded={isMenuActive(['product'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
+        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['product'])} aria-expanded={isMenuActive(['product'])} aria-label="Toggle Products submenu" className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
           <li className={isMenuActive(['product','shell'])?`${style.active}`:""}> <Link href="/products/shell-and-tube-heat-exchangers">Shell and Tube Heat Exchangers</Link>
-            {mobile &&  <button type="button" onClick={handleSubmenuToggle(['product','shell'])} aria-expanded={isMenuActive(['product','shell'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
+            {mobile &&  <button type="button" onClick={handleSubmenuToggle(['product','shell'])} aria-expanded={isMenuActive(['product','shell'])} aria-label="Toggle Shell and Tube Heat Exchangers submenu" className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
              <ul className={`${style.subMenu} ${style.secondarySubMenu}`}>
                   <li> <Link href="/products/shell-and-tube-heat-exchangers#conventional-heat">Conventional Heat Exchangers</Link> </li>
                   <li> <Link href="/products/shell-and-tube-heat-exchangers#helixchanger">Helixchanger®</Link> </li>
@@ -185,7 +186,7 @@ const handleSubmenuToggle = (path) => (e) => {
 
  <li className={isMenuActive(['industries'])?`${style.active}`:""}>
       <Link href="/industries">Industries</Link>
-        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['industries'])} aria-expanded={isMenuActive(['industries'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
+        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['industries'])} aria-expanded={isMenuActive(['industries'])} aria-label="Toggle Industries submenu" className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
           <li> <Link href="/industries#oil-and-gas">Oil and Gas</Link> </li>
           <li> <Link href="/industries#petrochemicals">Petrochemicals</Link> </li>
@@ -201,16 +202,12 @@ const handleSubmenuToggle = (path) => (e) => {
 
 
      <li className={isMenuActive(['capability'])?`${style.active}`:""}>
-      {/* TODO: missing route - no "Capability" page/section exists in the project yet */}
-      <Link href="#">Capability</Link>
-        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['capability'])} aria-expanded={isMenuActive(['capability'])} className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
+      <a href="#" >Capability</a>
+        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['capability'])} aria-expanded={isMenuActive(['capability'])} aria-label="Toggle Capability submenu" className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
-          {/* TODO: missing route - no "Engineering" page/section exists in the project yet */}
-          <li> <Link href="#">Engineering</Link> </li>
-          {/* TODO: missing route - no "Manufacturing" page/section exists in the project yet */}
-          <li> <Link href="#">Manufacturing</Link> </li>
-          {/* TODO: missing route - no "Logistics" page/section exists in the project yet */}
-          <li> <Link href="#">Logistics</Link> </li>
+          <li> <Link href="/engineering">Engineering</Link> </li>
+          <li> <Link href="/manufacturing-facilities-machinery">Manufacturing</Link> </li>
+          <li> <Link href="/logistics">Logistics</Link> </li>
          </ul>
     </li>
 
@@ -223,7 +220,7 @@ const handleSubmenuToggle = (path) => (e) => {
 </nav>
 
 
-<Button href={"/contact-us"} classname={`dark_blue ${style.header_btn}`} text={"Request a quote"}/>
+<Button setpopup={setPopup}  href={"#"} classname={`dark_blue ${style.header_btn}`} text={"Request a quote"}/>
 
 <button
   ref={toggleRef}
@@ -233,16 +230,20 @@ const handleSubmenuToggle = (path) => (e) => {
   aria-label={menuOpen ? "Close menu" : "Open menu"}
   onClick={()=>setMenuOpen(prev=>!prev)}
 >
-  <span></span>
-  <span></span>
-  <span></span>
+ <Image src="/assets/images/hamburger.svg" width={40} height={40} alt=''/>
 </button>
 
 </div>
 
 <div className={style.fixed_goldenJubilee}>
-  <Image src='/assets/images/header-fixed.png' width={100} height={112} alt='' />
+  <Image src='/assets/images/header-fixed.png' width={100} height={112} alt='Precision Equipments anniversary badge' />
 </div>
     </header>
+
+{popup && 
+<RequestQuote setpopup={setPopup}/>
+}
+
+    </>
   )
 }

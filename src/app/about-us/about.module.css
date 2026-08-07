@@ -179,7 +179,7 @@ z-index: 2;
 }
 
 .leaderPopupContainer{
-    width: 100%;
+    width: calc(90% - 10px);
     max-width: 800px;
     background-color: white;
     display: flex;
@@ -455,6 +455,42 @@ visibility: visible;
 
 /* mobile  */
 @media screen and (max-width:767px) {
+
+    .mapSection .mapArea .pin .content p{
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .mapSection .mapArea .pin .content div,
+       .mapSection .mapArea .pin .content{
+    gap: 8px;
+}
+
+    .mapSection .mapArea .pin .content{
+        padding: 8px;
+        width: 190px;
+    }
+
+    .whyChooseSection .whyChooseCards .card h3,
+.leadershipSection .leadershipCards .card h3,
+.leaderPopupContainer .content h3{
+font-size: 20px;
+  line-height: 28px;
+}
+
+
+    .leaderPopupContainer .image,
+    .leaderPopupContainer .content{
+    width: 100%;
+}
+
+ .leaderPopupContainer .content{
+    gap: 16px;
+ }
+
+    .leaderPopupContainer{
+        flex-direction: column;
+    }
 
     .membershipLogos .logo{
     width: calc(50% - 10px);

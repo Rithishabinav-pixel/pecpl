@@ -3,18 +3,18 @@ const newsLetterData = [
     "id": 1,
     "title": "Performance Enhancement of Heat Exchanger Tube by...",
     "slug": "performance-enhancement-of-heat-exchanger-tube-by",
-    "date": "Nov 25",
+    "date": "May 26",
     "image": "/assets/images/newsletter/newsletter-may-2026.webp",
-    "pdf": "/assets/pdf/newsletter/PE-Newsletter-Nov2025.pdf",
+    "pdf": "/assets/pdf/newsletter/PE-Newsletter-May-2026.pdf",
     "audio": "/assets/audio/PE-Newsletter-Apr-2026.mp3"
   },
   {
     "id": 2,
     "title": "Transforming Heat Exchanger Performance in Refineries",
     "slug": "transforming-heat-exchanger-performance-in-refineries",
-    "date": "Dec 25",
+    "date": "Nov 25",
     "image": "/assets/images/newsletter/TransformingHeatExchanger.png",
-    "pdf": "/assets/pdf/newsletter/pecpl-newsletter-july-2025.pdf",
+    "pdf": "/assets/pdf/newsletter/PE-Newsletter-Nov2025.pdf",
     "audio": "/assets/audio/TransformingHeatExchanger.mp3"
   },
   {
@@ -23,7 +23,7 @@ const newsLetterData = [
     "slug": "procedure-qualification-of-grade-5-welds-with-las",
     "date": "July 25",
     "image": "/assets/images/newsletter/newsletter-july-img.png",
-    "pdf": "/assets/pdf/newsletter/Xchanger-Xpress-Aug24.pdf",
+    "pdf": "/assets/pdf/newsletter/pecpl-newsletter-july-2025.pdf",
     "audio": "/assets/audio/pecpl-newsletter-july-2025.mp3"
   },
   {
@@ -41,7 +41,7 @@ const newsLetterData = [
     "slug": "co2-reduction-solutions",
     "date": "Aug 24",
     "image": "/assets/images/newsletter/lightweight-img.png",
-    "pdf": "https://pecpl.com/wp-content/uploads/2025/06/Xchanger-Xpress-Grade9-PressureVessel-July24.pdf",
+    "pdf": "/assets/pdf/newsletter/Xchanger-Xpress-Aug24.pdf",
     "audio": "/assets/audio/CO2-Reducion-Solutions.mp3"
   },
   {
@@ -75,7 +75,7 @@ const newsLetterData = [
     "id": 9,
     "title": "Expansion Bellows in Shell & Tube Heat Exchangers",
     "slug": "expansion-bellows-in-shell-tube-heat-exchangers",
-    "date": "Mar 20",
+    "date": "Apr 20",
     "image": "/assets/images/newsletter/bellows-img.png",
     "pdf": "/assets/pdf/newsletter/expansion_belows.pdf",
     "audio": "/assets/audio/expansion_belows.mp3"

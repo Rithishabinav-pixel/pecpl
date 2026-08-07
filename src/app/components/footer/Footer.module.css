@@ -37,6 +37,7 @@
     gap: 20px;
 }
 
+
 .siteLogo{
     width: 80%;
     min-width: 200px;
@@ -67,9 +68,11 @@
     color: var(--light-blue);
 }
 
-.newsLetterColumn h3,
+.menuColumn h3,
 .newsLetterColumn h3{
     font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .menuColumn h3,
@@ -77,7 +80,30 @@
 .newsLetterColumn h3,
 .newsLetterColumn p{
     color: white;
+    display: flex;
+    justify-content: space-between;
 }
+
+.menuColumn h3 button{
+    padding: 0;
+    background: none;
+    border: none;
+    filter: invert(1) brightness(100);
+    transition: 0.3s all;
+    display: none;
+}
+
+.menuColumn h3 button img{
+    float: left;
+    width: 20px;
+    height: auto;
+}
+
+.menuColumn h3 button.active{
+    transform: rotate(45deg);
+}
+
+
 
 .newsLetterColumn form input{
  padding: 12px 16px;
@@ -89,6 +115,25 @@
 .newsLetterColumn form input::placeholder{
     color: white;
     opacity: 1;
+}
+
+.fieldError{
+    color: #ff8080;
+    font-size: 13px;
+    margin: 0;
+}
+
+.formStatus{
+    font-weight: 500;
+    margin: 0;
+}
+
+.formStatus.success{
+    color: #4cd964;
+}
+
+.formStatus.error{
+    color: #ff8080;
 }
 
 .copyrights{
@@ -136,6 +181,31 @@
 
 /* mobile  */
 @media screen and (max-width:767px) {
+
+    .menuColumn h3 button{
+        display: block;
+    }
+
+    .menuColumn h3 + ul{
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.3s all;
+}
+
+.menuColumn h3:has(button.active) + ul{
+    max-height: 1000px;
+    visibility: visible;
+}
+
+    .siteDetails{
+        margin-bottom: 20px;
+    }
+
+    .allMenu{
+    gap:20px;
+}
+
 
 .siteLogo{
     width: 200px;

@@ -2,6 +2,19 @@ import React from 'react'
 import style from "./mainProduct.module.css"
 import Image from 'next/image';
 import LinkBtn from '../components/ui/LinkBtn';
+import { buildMetadata } from '@/lib/seo';
+
+export const metadata = buildMetadata({
+  title: "High Pressure Heat Exchanger | Heat Transfer Solutions - PECPL",
+  description:
+    "Explore high-performance High Pressure Heat Exchanger products delivering reliable Heat Transfer Solutions for oil, gas, power, and industrial applications.",
+  path: "/products",
+  keywords: [
+    "heat exchanger products",
+    "process equipment catalog",
+    "Precision Equipments products",
+  ],
+});
 
 
 const productData = [

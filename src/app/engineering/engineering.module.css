@@ -1,0 +1,343 @@
+.heroSection{
+    background-image: url('/assets/images/engineering-bnr-n.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-height: 380px;
+}
+
+.heroSection::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background:  linear-gradient(90deg, #002B3B 32%, #00000014 65%);
+    opacity: 0.9;
+}
+
+
+.heroContainer .content{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+max-width: 700px;
+position: relative;
+z-index: 2;
+}
+
+.heroContainer .content h1,
+.heroContainer .content p{
+    color: white;
+}
+
+.heroContainer .content h1{
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.productSection{
+    display: flex;
+    align-items: stretch;
+}
+
+.productSection .content,
+.productSection .image{
+    width: 50%;
+}
+
+.productSection .content,
+.splitContainer .content .pointsCard .card {
+    color: white;
+    gap: 20px;
+}
+
+.productSection .content{
+    justify-content: center;
+    padding: 50px 100px 50px 50px;
+}
+
+.productSection .content, 
+.productSection .content ul,
+.splitContainer .content .pointsCard .card,
+.splitContainer .content .pointsCard .card ul{
+     display: flex;
+    flex-direction: column;
+}
+
+.productSection .content ul,
+.splitContainer .content .pointsCard .card ul{
+    gap: 16px;
+}
+
+.productSection .content ul li,
+.splitContainer .content .pointsCard .card ul li,
+.materialsCards .card ul li{
+    position: relative;
+    padding-left: 32px;
+}
+
+.productSection .content ul li::before,
+.splitContainer .content .pointsCard .card ul li::before,
+.materialsCards .card ul li::before{
+     position: absolute;
+    content: '';
+    left: 0;
+    top: 5px;
+    background-image: url('/assets/images/check-tick-white.svg');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.materialsCards .card ul li::before{
+    background-image: url('/assets/images/check-tick-dark-blue.svg');
+
+}
+
+.productSection .content h3{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.productSection .content p,
+.splitContainer .content p.subHeading{
+ font-size: 24px;
+ line-height: 32px;   
+}
+
+.splitContainer{
+    display: flex;
+    gap: 100px;
+}
+
+.splitContainer .content{
+    width: calc(55% - 50px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.splitContainer .content .pointsCard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.splitContainer .content .pointsCard .card{
+    width: calc(50% - 15px);
+    background-color: var(--dark-blue);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.splitContainer .content .pointsCard .card h3{
+    color: white;
+    font-size: 24px;
+    line-height: 32px;
+
+}
+
+.splitContainer .image{
+    width: calc(45% - 50px);
+}
+
+.softwareCards,
+.materialsCards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.softwareCards{
+    gap: 30px;
+}
+
+.softwareCards .card,
+.materialsCards .card,
+.materialsCards .card ul{
+display: flex;
+flex-direction: column;
+transition: 0.3s all;
+}
+
+.softwareCards .card,
+.materialsCards .card{
+padding: 30px;
+gap: 20px;
+}
+
+.materialsCards{
+    border: solid var(--dark-blue) 1px;
+}
+
+.materialsCards .card{
+    border-right: solid var(--dark-blue) 1px;
+    width: 20%;
+}
+
+.materialsCards .card h3{
+    color: var(--dark-blue);
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.materialsCards .card:last-child{
+    border-right: none;
+}
+
+.materialsCards .card ul{
+    gap: 8px;
+}
+
+.softwareCards .card{
+  width: calc(33.33% - 20px);
+background-color: var(--dark-blue);
+border-radius: 8px;
+}
+
+.softwareCards .card:hover{
+    background-color: var(--light-blue);
+}
+
+.softwareCards .card h3{
+    font-size: 20px;
+    line-height: 28px;
+    color: white;
+    font-weight: 500;
+}
+
+.softwareCards .card>div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+
+
+.productSection .image img,
+.splitContainer .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.splitContainer .image img{
+    border-radius: 8px;
+}
+
+
+/* responsive  */
+
+/* tablet  */
+@media screen and (max-width:1200px){
+
+.softwareCards{
+    gap: 20px;
+}
+
+.softwareCards .card{
+width: calc(50% - 10px);
+padding: 20px;
+}
+
+.materialsCards .card{
+width: 50%;
+padding: 20px;
+    border-bottom: solid var(--dark-blue) 1px;
+
+}
+
+.materialsCards .card:nth-child(even){
+    border-right: none;
+}
+
+.materialsCards .card:last-child{
+    border-bottom: none;
+}
+
+
+    .splitContainer .content .pointsCard{
+        gap: 20px;
+    }
+
+    .splitContainer .content .pointsCard .card{
+        width: calc(50% - 10px);
+    }
+
+
+    .productSection .content h3{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+    .productSection .content p,
+.splitContainer .content p.subHeading{
+ font-size: 20px;
+ line-height: 28px;   
+}
+
+    .productSection .content,
+.productSection .image,
+.splitContainer .image,
+.splitContainer .content{
+    width: 100%;
+    gap: 16px;
+}
+
+    .productSection,
+    .splitContainer{
+   flex-direction: column-reverse;
+   gap: 30px;
+}
+
+.productSection .content{
+    padding: 50px 20px;
+}
+
+      .heroContainer .content{
+        width: 60%;
+    }
+
+    .heroContainer .content h1{
+    font-size: 24px;
+        line-height: 32px;
+}
+
+}
+
+
+/* mobile  */
+@media screen and (max-width:767px){
+
+    .materialsCards .card{
+width: 100%;
+    border-bottom: solid var(--dark-blue) 1px;
+    border-right: none;
+}
+
+
+        .productSection .content p,
+.splitContainer .content p.subHeading{
+ font-size: 18px;
+ line-height: 26px;   
+}
+
+
+  .splitContainer .content .pointsCard .card h3{
+     font-size: 20px;
+     line-height: 28px;
+    }
+
+    .softwareCards .card,
+      .splitContainer .content .pointsCard .card{
+width: 100%;
+}
+
+     .heroContainer .content{
+        width: 100%;
+    }
+
+}

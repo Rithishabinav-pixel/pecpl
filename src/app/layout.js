@@ -1,7 +1,6 @@
 import { Lato, Open_Sans } from "next/font/google";import "./globals.css";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import FooterCTA from "./components/ui/FooterCTA";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+import SiteChrome from "./components/SiteChrome";
 
 
 const lato = Lato({
@@ -17,6 +16,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
   title: "Precision Equipments | Heat Exchangers & Process Equipment Manufacturer",
   description:
     "Precision Equipments (PECPL) designs and manufactures heat exchangers, pressure vessels, and critical process equipment for Oil & Gas, Petrochemical, Fertilizer, LNG, and Renewable Energy industries.",
@@ -29,15 +29,22 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${lato.variable} ${openSans.variable}`}
     >
+      <GoogleTagManager gtmId="GTM-MDVV5KQ" />
       <body>
-        <Header/>
-        {children}
-
-        <FooterCTA/>
-        <Footer/>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MDVV5KQ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <SiteChrome>{children}</SiteChrome>
         </body>
+      <GoogleAnalytics gaId="G-F86RNNWHDP" />
     </html>
   );
 }

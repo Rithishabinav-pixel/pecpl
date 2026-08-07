@@ -1,0 +1,68 @@
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 20px;
+  animation: marquee-scroll 120s linear infinite;
+  will-change: transform;
+}
+
+.track.reverse {
+  animation-direction: reverse;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 150px;
+}
+
+.item img{
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  .item {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .item {
+    width: 110px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .item {
+    width: 70px;
+  }
+
+  .track {
+    gap: 12px;
+  }
+}

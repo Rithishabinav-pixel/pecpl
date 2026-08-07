@@ -1,0 +1,343 @@
+.heroSection{
+    background-image: url('/assets/images/career-banner-1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.heroSection::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background:  linear-gradient(90deg, #002B3B 32%, #00000014 100%);
+    opacity: 0.9;
+}
+
+
+.heroContainer .content{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+max-width: 700px;
+position: relative;
+z-index: 2;
+}
+
+.heroContainer .content h1,
+.heroContainer .content p{
+    color: white;
+}
+
+.heroContainer .content h1{
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.whyChooseSection .whyChooseCards .card{
+    background-color: white;
+     border-radius: 8px 8px 8px 8px;
+    padding: 20px 20px 20px 20px;
+}
+
+.whyChooseSection .whyChooseCards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.whyChooseSection .whyChooseCards .card h3,
+.whyChooseSection .whyChooseCards .card p{
+  color:var(--dark-blue);
+}
+
+.whyChooseSection .whyChooseCards .card h3{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.whyChooseSection .whyChooseCards .card{
+    width: calc(25% - 20px);
+    
+}
+
+.whyChooseSection .whyChooseCards .card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.whyChooseSection .whyChooseCards .card,
+.whyChooseSection .whyChooseCards .card .icon{
+    transition: 0.3s all;
+}
+
+.whyChooseSection .whyChooseCards .card .icon{
+    width: 60px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-color: var(--dark-blue);
+    display: grid;
+    place-items: center;
+    border-radius: 100px;
+}
+
+.whyChooseSection .whyChooseCards .card:hover .icon{
+    background-color: var(--light-blue);
+}
+
+.whyChooseSection .whyChooseCards .card .icon .iconImg{
+    width: 70%;
+    height: auto;
+    float: left;
+}
+
+
+
+.whyChooseSection .whyChooseCards .card:hover{
+  transform: translateY(-10px);
+}
+
+.whyChooseSection .whyChooseCards .card:hover img.icon{
+  transform: scaleX(-1);
+}
+
+
+
+.formContainer{
+    max-width: 700px;
+    background-color: var(--dark-blue);
+    padding: 50px;
+    border-radius: 8px;
+}
+
+.formContainer .top_content h2,
+.formControl label{
+    color: white;
+}
+
+.formContainer .top_content h2{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.formSection form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.formControl{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc(50% - 15px);
+}
+
+
+
+.formControl.fullWidth{
+    width: 100%;
+}
+
+.formControl input,
+.formControl textarea{
+    background: white;
+    border: none;
+    min-height: 52px;
+    border-radius: 4px;
+    padding: 16px 20px;
+    border: solid white 1px;
+
+}
+
+.formControl.file input{
+    background-color: transparent;
+    border-style: dashed;
+    cursor: pointer;
+}
+
+.formControl.file p,
+.formControl.file input{
+color: white;
+}
+
+.formControl input:focus,
+.formControl textarea:focus{
+    border: solid var(--dark-blue) 1px;
+    outline: none;
+}
+
+.formControl textarea{
+    height: 150px;
+    resize: none;
+}
+
+.formControl label{
+    color: white;
+}
+
+.captcha{
+    width: 100%;
+  
+}
+
+.captcha div{
+    width: 100%;
+    max-width: 550px;
+      padding: 16px;
+    border: solid white 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 16px 8px;
+    align-items: center;
+    margin: auto;
+    color: white;
+}
+
+.captcha p{
+    width: 100%;
+    color: white;
+}
+
+.captcha p.error{
+    color: red;
+}
+
+.fieldError{
+    color: red;
+    font-size: 13px;
+    margin: 0;
+}
+
+.formStatus{
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+}
+
+.formStatus.success{
+    color: #2e9c4d;
+}
+
+.formStatus.error{
+    color: red;
+}
+
+.captcha input {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: #000;
+    appearance: textfield;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.formSection form button{
+    background-color: var(--light-blue);
+}
+
+.captcha input:read-only{
+color: white;
+}
+
+.captcha input::-webkit-outer-spin-button,
+.captcha input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* responsive  */
+
+/* tablet  */
+@media screen and (max-width:1200px){
+
+
+    .formSection{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+  
+.formSection h2{
+    font-size:32px;
+    line-height: 40px;
+}
+
+
+.formContainer{
+    width: 100%;
+}
+
+
+.formSection:global(.no_padding_top){
+    margin-top: 0px;
+    padding: 50px 20px;
+    margin-top: 50px;
+}
+
+    .heroContainer .content{
+        width: 60%;
+    }
+
+    .heroContainer .content h1{
+    font-size: 24px;
+        line-height: 32px;
+}
+
+
+  .whyChooseSection .whyChooseCards .card{
+    width: calc(50% - 10px);
+}
+
+
+}
+
+
+/* mobile  */
+@media screen and (max-width:767px) {
+
+
+    .formContainer{
+    padding: 20px;
+}
+
+
+
+.formSection form{
+    gap: 20px;
+}
+
+.formControl{
+    width: 100%;
+}
+
+    .whyChooseSection .whyChooseCards .card h3{
+font-size: 20px;
+  line-height: 28px;
+}
+
+
+    .heroContainer .content{
+        width: 100%;
+    }
+
+  
+  .whyChooseSection .whyChooseCards .card{
+    width: 100%;
+}
+}

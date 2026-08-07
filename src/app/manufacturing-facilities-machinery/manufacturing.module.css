@@ -1,0 +1,222 @@
+.heroSection{
+    background-image: url('/assets/images/engineer-bnr-n.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-height: 380px;
+}
+
+.heroSection::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background:  linear-gradient(90deg, #002B3B 32%, #00000014 65%);
+    opacity: 0.9;
+}
+
+
+.heroContainer .content{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100%;
+max-width: 700px;
+position: relative;
+z-index: 2;
+}
+
+.heroContainer .content h1,
+.heroContainer .content p{
+    color: white;
+}
+
+.heroContainer .content h1{
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.splitContainer .content p.subHeading{
+ font-size: 24px;
+ line-height: 32px;   
+}
+
+.splitContainer{
+    display: flex;
+    gap: 100px;
+}
+
+.splitContainer .content{
+    width: calc(55% - 50px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.splitContainer .content .pointsCard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    margin-top: 30px
+}
+
+.splitContainer .content .pointsCard h4{
+    width: 100%;
+}
+
+.splitContainer .content .pointsCard .card{
+    width: calc(33% - 13.33px);
+       color: white;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.splitContainer .content .pointsCard h4{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.splitContainer .content .pointsCard  h4,
+.splitContainer .content .pointsCard .card h5,
+.splitContainer .content .pointsCard .card p{
+    color: var(--dark-blue);
+}
+
+.splitContainer .content .pointsCard .card h5{
+    font-size: 34px;
+    line-height: 42px;
+}
+
+
+.splitContainer .image{
+    width: calc(45% - 50px);
+}
+
+.splitContainer .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+    border-radius: 8px;
+
+}
+
+.machinerieCards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.machinerieCards .card{
+    width: calc(20% - 16px);
+    position: relative;
+    transition: 0.3s all;
+}
+
+.machinerieCards .card .image,
+.machinerieCards .card .image img{
+    width: 100%;
+    
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.machinerieCards .card .image{
+    position: relative;
+}
+.machinerieCards .card .image::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) , transparent);
+    z-index: 2;
+}
+
+.machinerieCards .card .image img{
+    height: auto;
+    float: left;
+    transition: 0.3s all;
+}
+
+.machinerieCards .card:hover .image img{
+    transform: scale(1.05);
+}
+
+.machinerieCards .card h3{
+    color: white;
+    position: absolute;
+    width: calc(100% - 40px);
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    z-index: 3;
+    text-align: left;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+
+
+/* responsive  */
+
+/* tablet  */
+@media screen and (max-width:1200px){
+
+    .machinerieCards .card{
+    width: calc(33.33% - 13.33px);
+}
+
+.machinerieCards .card h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+        .splitContainer .content .pointsCard{
+        gap: 20px;
+    }
+
+    .splitContainer .content .pointsCard .card{
+        width: calc(50% - 10px);
+    }
+    .splitContainer .content p.subHeading{
+ font-size: 20px;
+ line-height: 28px;   
+}
+
+.splitContainer .image,
+.splitContainer .content{
+    width: 100%;
+    gap: 16px;
+}
+
+    .splitContainer{
+   flex-direction: column-reverse;
+   gap: 30px;
+}
+
+.heroContainer .content{
+        width: 60%;
+    }
+
+    .heroContainer .content h1{
+    font-size: 24px;
+        line-height: 32px;
+}
+
+}
+
+/* mobile  */
+@media screen and (max-width:767px){
+       .machinerieCards .card{
+    width: 100%;
+}
+
+.machinerieCards .card h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+       .heroContainer .content{
+        width: 100%;
+    }
+}

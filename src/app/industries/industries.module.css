@@ -30,6 +30,11 @@
     color: white;
 }
 
+.heroContainer p{
+    width: 100%;
+    max-width: 650px;
+}
+
 
 .products_section.reverse{
     background-color: var(--gray);
@@ -224,4 +229,25 @@ gap: 20px
 
 .industrialExcellence .industrialExcellenceCards .card:hover img{
   transform: scaleX(-1);
+}
+
+/* responsive  */
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+
+ 
+
+.products_section .container .image,
+.products_section .container .content{
+    width: 100%;
+    gap: 16px;
+}
+
+.products_section .container .content h3{
+    font-size: 18px;
+    line-height: 26px;
+}
+    
 }

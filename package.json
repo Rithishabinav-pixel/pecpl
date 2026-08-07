@@ -9,7 +9,15 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.3.0",
+    "@prisma/adapter-pg": "^7.9.1",
+    "@prisma/client": "^7.9.1",
+    "aos": "^2.3.4",
+    "axios": "^1.19.0",
+    "dotenv": "^17.4.2",
     "next": "16.2.12",
+    "nodemailer": "^9.0.4",
+    "pg": "^8.22.0",
     "react": "19.2.4",
     "react-countup": "^6.5.3",
     "react-dom": "19.2.4",
@@ -19,6 +27,7 @@
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.2.12"
+    "eslint-config-next": "16.2.12",
+    "prisma": "^7.9.1"
   }
 }

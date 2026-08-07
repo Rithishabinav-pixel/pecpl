@@ -160,6 +160,12 @@ font-weight: 900;
   transform: scaleX(-1);
 }
 
+.industrySection .industries_slider{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .industrySection .industries_slider .industrySlide_card img{
   width: 100%;
   height: auto;
@@ -178,6 +184,10 @@ font-weight: 900;
 
 /* tablet  */
 @media screen and (max-width:1200px){
+
+  .industrySection .industries_slider{
+  gap: 30px;
+}
 
   .whyChooseSection .whyChooseCards .card,
    .solutionsSection .solutionsCards .card{

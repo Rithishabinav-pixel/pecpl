@@ -325,9 +325,24 @@ position: absolute;
     inset: 0;
 }
 
+body:has(.popup){
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .popupContainer{
   z-index: 3;
   position: relative;
+  animation: popupContainer 0.15s forwards linear;
+}
+
+@keyframes popupContainer {
+  from{
+    transform: scale(0.9);
+  }
+  to{
+    transform: scale(1);
+  }
 }
 
 .popupClosebtn{
@@ -376,4 +391,17 @@ cursor: pointer;
   font-size: 24px;
   line-height: 32px;
 }
+
+.popupClosebtn{
+  top: 0px;
+  right: 0px;
+  padding: 2px;
+  background-color:var(--light-blue);
+ 
+}
+
+.popupClosebtn img{
+  filter: invert(1) brightness(100);
+}
+
 }
