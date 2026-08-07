@@ -7,15 +7,15 @@ export default function NotFound() {
     <>
     
     <section>
-      <ddiv className="container">
+      <div className="container">
         <div className={style.number}>
             <h1>404</h1>
             <h2>ERROR 🙁</h2>
             <h3>SORRY.. PAGE NOT FOUND!</h3>
             <p>The page are you looking for doesn’t exist…</p>
-            <Button href="/" text="Return home"/>
+            <Button classname="light_blue" href="/" text="Return home"/>
         </div>
-        </ddiv>
+        </div>
     </section>
     
     </>
