@@ -124,7 +124,7 @@ const handleSubmenuToggle = (path) => (e) => {
     <>
     <header id={style.header} className={fixed?"fixed":""}>
 <div className={`container ${style.container}`}>
-  <Link href='/' className={style.logo}>
+  <Link href='/' className={style.logo} aria-label="Precision  Equipments">
     <Image src="/assets/images/logo.svg" width={245} height={64} alt='Precision Equipments' priority/>
   </Link>
 

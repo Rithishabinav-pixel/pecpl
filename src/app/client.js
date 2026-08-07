@@ -4,7 +4,8 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import style from './page.module.css'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
+
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -18,6 +19,7 @@ import LinkBtn from "./components/ui/LinkBtn";
 import FooterCTA from "./components/ui/FooterCTA";
 import Marquee from "./components/ui/Marquee";
 import Clients from "./data/clients";
+import PreloadHeroImage from "./components/PreloadHeroImage";
 
 // Hero banner data
 const heroBannerData = [
@@ -67,19 +69,19 @@ const solutionsData = [
     image:"/assets/images/engineering.svg",
     name:"Engineering",
     content:"Capability-Engineering Capability is not just what we do. It’s how we think. With in-depth design expertise, advanced engineering tools, and strict adherence to global standards.",
-link:""
+link:"/engineering/"
   },
   {
     image:"/assets/images/manufacture-img.svg",
     name:"Manufacturing",
     content:"Equipped for excellence, our facilities combine advanced machinery, skilled craftsmanship, and streamlined processes to produce complex, large-scale heat exchangers and process equipment.",
-link:""
+link:"/manufacturing-facilities-machinery/"
   },
   {
     image:"/assets/images/logistic-img.svg",
     name:"Logistics",
     content:"Moving heavy, moving smart. From road to sea, our logistics operations are built on precision, handling ODC, coordinating shipments, and ensuring safe, timely deliveries across the globe.",
-link:""
+link:"/logistics/"
   },
 ]
 
@@ -125,53 +127,69 @@ export default function Page() {
 
   return (
 <>
+
+ <PreloadHeroImage />
     {/* hero section  */}
-    <section className={style.heroSection}>
-      <Swiper
-         modules={[EffectFade, Navigation, Pagination, Autoplay]}
-        effect={"fade"}
-         fadeEffect={{
-      crossFade: true,
+  <section className={style.heroSection}>
+  <Swiper
+    modules={[EffectFade, Navigation, Pagination, Autoplay]}
+    effect="fade"
+    fadeEffect={{ crossFade: true }}
+    speed={500}
+    slidesPerView={1}
+    loop
+    navigation={{
+      prevEl: ".custom_prev",
+      nextEl: ".custom_next",
     }}
-        speed={500}
-        slidesPerView={1}
-        loop
-         navigation={{
-    prevEl: ".custom_prev",
-    nextEl: ".custom_next",
-  }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-      >
-        {heroBannerData.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className={`${style.heroSlide}`} style={{backgroundImage: `url(${item.image})`}}>
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+  >
+    {heroBannerData.map((item, index) => (
+      <SwiperSlide key={index}>
+        <div className={style.heroSlide}>
+          <Image
+            src={item.image}
+            alt={item.title}
+            fill
+            priority={index === 0}
+            fetchPriority={index === 0 ? "high" : "auto"}
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              zIndex: -1,
+            }}
+          />
 
-              <div className="container">
+          <div className="container">
+            <div className={style.heroContent}>
+              {index === 0 ? (
+                <h1 className={`heading ${style.sliderHeading}`}>
+                  {item.title}
+                </h1>
+              ) : (
+                <h2 className={`heading ${style.sliderHeading}`}>
+                  {item.title}
+                </h2>
+              )}
 
-              <div className={style.heroContent}>
-                 {index === 0 ? (
-        <h1 className={`heading ${style.sliderHeading}`}>{item.title}</h1>
-      ) : (
-        <h2 className={`heading ${style.sliderHeading}`}>{item.title}</h2>
-      )}
-
-                {item.link && (
-                  <Button href={item.link} classname={`white`} text={"Explore More"}/>
-                )}
-              </div>
-
-              </div>
-
+              {item.link && (
+                <Button 
+                  href={item.link}
+                  classname="white"
+                  text="Explore More"
+                />
+              )}
             </div>
-          </SwiperSlide>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
 
-
-        ))}
-      </Swiper>
-<div className={style.heroSlide_navigation}>
+  <div className={style.heroSlide_navigation}>
       <button className={`custom_prev ${style.prev}`}>
         <Image src="/assets/images/arrow-left.svg" width={24} height={24} alt=""/>
       </button>
@@ -180,7 +198,7 @@ export default function Page() {
 </button>
 </div>
 
-    </section>
+</section>
 
     {/* about section  */}
     <section className={style.aboutSection}>
@@ -241,7 +259,7 @@ export default function Page() {
   <Image src={item.image} width={650} height={519} alt={item.name}/>
   <h3 className="heading">{item.name}</h3>
   <p>{item.content}</p>
-  <LinkBtn href={item.link} text="Know More"/>
+  <LinkBtn href={item.link} aria-label={`Know more about ${item.name}`} text="Know More"/>
 </div>
 
 ))
@@ -303,7 +321,7 @@ export default function Page() {
           <Image className={style.image} src={item.image} width={384} height={386} alt={item.name}/>
           <h3 className="heading">{item.name}</h3>
           <p>{item.content}</p>
-          <LinkBtn href={item.link} text="Know more"/>
+          <LinkBtn href={item.link} aria-label={`Know more about ${item.name}`} text="Know more"/>
         </div>
       ))}
      </div>

@@ -20,7 +20,7 @@ export const metadata = {
   title: "Precision Equipments | Heat Exchangers & Process Equipment Manufacturer",
   description:
     "Precision Equipments (PECPL) designs and manufactures heat exchangers, pressure vessels, and critical process equipment for Oil & Gas, Petrochemical, Fertilizer, LNG, and Renewable Energy industries.",
-};
+  };
 
 export default function RootLayout({ children }) {
 
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <SiteChrome>{children}</SiteChrome>
+        <main><SiteChrome>{children}</SiteChrome></main>
         </body>
       <GoogleAnalytics gaId="G-F86RNNWHDP" />
     </html>
