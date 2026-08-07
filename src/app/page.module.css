@@ -221,6 +221,10 @@ gap: 16px;
 /* mobile  */
 @media screen and (max-width:767px) {
 
+  .productsSection .productCards .card:nth-child(2){
+  margin-top: 0px;
+}
+
   
   .whyChooseSection .whyChooseCards .card,
    .solutionsSection .solutionsCards .card{
