@@ -69,7 +69,13 @@
       "Bash(git add *)",
       "Bash(awk '$1==\"blob\" && $3>50000000 {print}')",
       "Bash(git push *)",
-      "Bash(npx vercel *)"
+      "Bash(npx vercel *)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/career-thank-you)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/career)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" -L http://localhost:3000/career-thank-you)",
+      "Bash(curl -sI http://localhost:3000/career-thank-you)",
+      "Bash(curl -s -X POST http://localhost:3000/api/career/ -F 'name=Test Applicant' -F phone=9876543210 -F email=test@example.com -F location=Chennai -F 'message=Testing career form after position field removal' -F 'resume=@e:/Rithish/pecpl/test-resume.pdf;type=application/pdf' -w '\\\\nHTTP_STATUS:%{http_code}\\\\n')"
     ],
     "additionalDirectories": [
       "e:\\Rithish\\pecpl\\src\\app\\admin\\enquiries",

@@ -20,7 +20,7 @@ export default function AdminLoginPage() {
     setSubmitting(true);
 
     try {
-      const res = await apiClient.post("/api/admin/login", { password });
+      const res = await apiClient.post("/api/admin/login/", { password });
 
       const data = res.data;
 

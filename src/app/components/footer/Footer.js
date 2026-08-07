@@ -104,11 +104,11 @@ export default function Footer() {
                 <ul className={style.contactDetails}>
                     <li> <a href="tel:+91444710 0603"> <Image src="/assets/images/call.svg" width={24} height={24} alt=''/>+91 44 - 4710 0603 </a>  </li>
                     <li> <a href="mailto:sales@pecpl.com"> <Image src="/assets/images/sms.svg" width={24} height={24} alt=''/>sales@pecpl.com</a>  </li>
-                    <li> <a href="javascript:void(0)"> <Image src="/assets/images/location.svg" width={24} height={24} alt=''/>Unit-1: B-70/1,<br/>
+                    <li> <a href="https://share.google/yfK9PA775Osk85qcO" target='_blank'> <Image src="/assets/images/location.svg" width={24} height={24} alt=''/>Unit-1: B-70/1,<br/>
 SIPCOT Industrial Park,<br/>
 Thandalam, Irungattukottai,<br/>
 Chennai-602 105, India.</a>  </li>
-                    <li> <a href="javascript:void(0)"> <Image src="/assets/images/location.svg" width={24} height={24} alt=''/>Unit-2: No.126, S.No.1364/2A,<br/>
+                    <li> <a href="https://share.google/zp6LRVb6pDGe9JgL7" target='_blank'> <Image src="/assets/images/location.svg" width={24} height={24} alt=''/>Unit-2: No.126, S.No.1364/2A,<br/>
 Perambakkam Main Road,<br/>
 Usain Nagar, Mappedu,<br/>
 Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>

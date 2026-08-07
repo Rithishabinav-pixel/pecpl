@@ -16,30 +16,26 @@ export default function sitemap() {
   const lastModified = new Date();
 
   const staticPages = [
-    { url: "/", changeFrequency: "weekly", priority: 1.0 },
-    { url: "/about-us", changeFrequency: "monthly", priority: 0.8 },
-    { url: "/contact-us", changeFrequency: "monthly", priority: 0.8 },
-    { url: "/career", changeFrequency: "weekly", priority: 0.7 },
-    { url: "/clients", changeFrequency: "monthly", priority: 0.6 },
-    { url: "/industries", changeFrequency: "monthly", priority: 0.8 },
-    { url: "/knowledge-centre", changeFrequency: "weekly", priority: 0.7 },
-    { url: "/responsibility", changeFrequency: "monthly", priority: 0.6 },
-    { url: "/engineering", changeFrequency: "monthly", priority: 0.7 },
-    { url: "/manufacturing-facilities-machinery", changeFrequency: "monthly", priority: 0.7 },
-    { url: "/logistics", changeFrequency: "monthly", priority: 0.7 },
-    { url: "/products", changeFrequency: "weekly", priority: 0.9 },
+    { url: "/", },
+    { url: "/about-us/"},
+    { url: "/contact-us/"},
+    { url: "/career/",},
+    { url: "/clients/", },
+    { url: "/industries/", },
+    { url: "/knowledge-centre/",},
+    { url: "/responsibility/", },
+    { url: "/engineering/",  },
+    { url: "/manufacturing-facilities-machinery/",},
+    { url: "/logistics/",  },
+    { url: "/products/",},
   ];
 
   const productPages = getProductSlugs().map((slug) => ({
-    url: `/products/${slug}`,
-    changeFrequency: "monthly",
-    priority: 0.6,
+    url: `/products/${slug}/`,
   }));
 
   return [...staticPages, ...productPages].map((page) => ({
     url: `${SITE_URL}${page.url}`,
     lastModified,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
   }));
 }

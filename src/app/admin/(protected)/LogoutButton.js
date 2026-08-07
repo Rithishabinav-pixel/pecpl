@@ -10,7 +10,7 @@ export default function LogoutButton() {
 
   const handleLogout = async () => {
     await apiClient.post("/api/admin/logout");
-    router.push("/admin/login");
+    router.push("/admin/login/");
     router.refresh();
   };
 

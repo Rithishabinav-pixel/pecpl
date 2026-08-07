@@ -38,10 +38,6 @@ export default async function AdminCareerDetailPage({ params }) {
           <span>{application.location}</span>
         </div>
         <div className={style.detailRow}>
-          <strong>Position Applied</strong>
-          <span>{application.position}</span>
-        </div>
-        <div className={style.detailRow}>
           <strong>Message</strong>
           <span>{application.message || "-"}</span>
         </div>

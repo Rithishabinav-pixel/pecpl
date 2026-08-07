@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import style from './career.module.css'
 import Image from 'next/image'
 import Button from "../components/ui/button";
@@ -40,6 +41,8 @@ const whyChooseData = [
 
 export default function page() {
 
+    const router = useRouter();
+
    const generateRandomNumber = () => Math.floor(Math.random() * 9) + 1;
   
     const [inputTouch,setInputTouch] = useState(false)
@@ -61,7 +64,6 @@ export default function page() {
       phone: "",
       email: "",
       location: "",
-      position: "",
       message: "",
       captcha: "",
       captchaValidation: true,
@@ -133,7 +135,6 @@ export default function page() {
       submitData.set("phone", formData.phone);
       submitData.set("email", formData.email);
       submitData.set("location", formData.location);
-      submitData.set("position", formData.position);
       submitData.set("message", formData.message);
       submitData.set("resume", resumeFile);
 
@@ -159,7 +160,6 @@ export default function page() {
         phone: "",
         email: "",
         location: "",
-        position: "",
         message: "",
         captcha: "",
         captchaValidation: true,
@@ -169,6 +169,7 @@ export default function page() {
       if (fileInputRef.current) fileInputRef.current.value = "";
 
       generateCaptcha();
+       router.push("/career-thank-you");
     } catch (error) {
       setStatus({
         type: "error",
@@ -287,17 +288,7 @@ export default function page() {
               {errors.location && <p className={style.fieldError}>{errors.location}</p>}
             </div>
 
-            <div className={style.formControl}>
-              <label htmlFor="career-position">Position Applied For</label>
-              <input
-                id="career-position"
-                type="text"
-                name="position"
-                value={formData.position}
-                onChange={handleChange}
-              />
-              {errors.position && <p className={style.fieldError}>{errors.position}</p>}
-            </div>
+          
 
              <div className={`${style.formControl} ${style.fullWidth} ${style.file}`}>
               <label htmlFor="career-resume">Upload Resume*(Limit upto 5MB) Accept - pdf|doc|docx</label>

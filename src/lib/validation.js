@@ -56,19 +56,12 @@ export function validateNewsletterEmail(email) {
   return { valid: Object.keys(errors).length === 0, errors };
 }
 
-export function validatePosition(position) {
-  const value = (position ?? "").trim();
-  if (!value) return "Position applied for is required.";
-  return null;
-}
-
-export function validateCareerForm({ name, phone, email, location, position }) {
+export function validateCareerForm({ name, phone, email, location }) {
   const errors = {
     name: validateName(name),
     phone: validatePhone(phone),
     email: validateEmail(email),
     location: validateLocation(location),
-    position: validatePosition(position),
   };
 
   Object.keys(errors).forEach((key) => {

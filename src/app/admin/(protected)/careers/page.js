@@ -33,7 +33,6 @@ export default async function AdminCareersPage({ searchParams }) {
               <th>Name</th>
               <th>Phone</th>
               <th>Email</th>
-              <th>Position Applied</th>
               <th>Resume</th>
               <th>Message</th>
               <th>Date</th>
@@ -46,7 +45,6 @@ export default async function AdminCareersPage({ searchParams }) {
                 <td>{application.name}</td>
                 <td>{application.phone}</td>
                 <td>{application.email}</td>
-                <td>{application.position}</td>
                 <td>
                   <a className={style.viewLink} href={`/api/admin/resume/${application.id}`}>
                     Download

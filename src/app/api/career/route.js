@@ -15,11 +15,10 @@ export async function POST(request) {
   const phone = formData.get("phone");
   const email = formData.get("email");
   const location = formData.get("location");
-  const position = formData.get("position");
   const message = formData.get("message");
   const resume = formData.get("resume");
 
-  const { valid, errors } = validateCareerForm({ name, phone, email, location, position });
+  const { valid, errors } = validateCareerForm({ name, phone, email, location });
   const resumeError = validateResumeFile(resume);
 
   if (resumeError) errors.resume = resumeError;
@@ -37,7 +36,6 @@ export async function POST(request) {
         phone: phone.trim(),
         email: email.trim(),
         location: location.trim(),
-        position: position.trim(),
         message: message?.trim() ? message.trim() : null,
         resumePath,
         resumeName,

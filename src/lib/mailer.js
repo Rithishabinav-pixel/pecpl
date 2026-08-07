@@ -156,24 +156,23 @@ export function buildEnquiryEmail({ name, phone, email, location, message, formT
   return { subject: `New ${label} Enquiry from ${name}`, html };
 }
 
-export function buildCareerApplicationEmail({ name, phone, email, location, position, message, resumeName, createdAt }) {
+export function buildCareerApplicationEmail({ name, phone, email, location, message, resumeName, createdAt }) {
   const html = renderEmailShell({
     heading: "New Career Application",
-    preheader: `${name} applied for ${position}`,
+    preheader: `${name} submitted a career application`,
     rows: [
       { label: "Form Type", value: "Career Application" },
       { label: "Name", value: name },
       { label: "Phone", value: phone },
       { label: "Email", value: email },
       { label: "Location", value: location },
-      { label: "Position Applied", value: position },
       { label: "Message", value: message || "-" },
       { label: "Resume", value: resumeName ? `${resumeName} (attached in admin panel)` : "-" },
       { label: "Submitted", value: formatDateTime(createdAt) },
     ],
   });
 
-  return { subject: `New Career Application from ${name} — ${position}`, html };
+  return { subject: `New Career Application from ${name}`, html };
 }
 
 export function buildNewsletterEmail({ email, createdAt }) {

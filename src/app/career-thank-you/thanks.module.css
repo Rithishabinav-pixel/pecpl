@@ -1,0 +1,34 @@
+.thanksContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    align-items: center;
+    text-align: center;
+}
+
+.thanksContainer .image{
+    width: 150px;
+}
+
+.thanksContainer .image img{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+/* responsive  */
+
+/* tablet  */
+
+@media screen and (max-width:1200px) {
+
+    .thanksContainer .image{
+    width: 80px;
+}
+
+.thanksContainer{
+    gap: 16px;
+}
+
+}
