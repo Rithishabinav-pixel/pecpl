@@ -5,3 +5,36 @@
     align-items: center;
     text-align: center;
 }
+
+.image{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
+h1.heading{
+    font-size: 200px;
+    line-height: 210px;
+}
+
+h2.heading{
+    font-size: 50px;
+    line-height: 58px;
+    color: var(--light-blue);
+animation: error 0.005s infinite alternate linear;
+transform: translateX(-2px);
+}
+
+@keyframes error {
+    0%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: scale(1) translateX(2px);
+    }
+}
+
+h3.heading{
+    font-size:24px;
+    line-height: 32px;
+}
