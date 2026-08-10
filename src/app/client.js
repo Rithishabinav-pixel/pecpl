@@ -25,18 +25,38 @@ import PreloadHeroImage from "./components/PreloadHeroImage";
 const heroBannerData = [
   {
     title: "Delivering Advanced Heat Transfer Solutions for Industry-leading Performance",
-    link: "/",
-    image: "/assets/images/hero-banner.webp",
+    link: "/about-us/",
+    image: "/assets/images/ban1.webp",
   },
   {
     title: "Powering High-Efficiency Shell Tube Heat Exchangers with Cutting-Edge Technology",
-    link: "/",
-    image: "/assets/images/hero-banner.webp",
+    link: "/industries/",
+    image: "/assets/images/ban2.webp",
+  },
+   {
+    title: "Designed for Performance. Built for Reliability. Proven in Service.",
+    link: "/engineering/",
+    image: "/assets/images/ban3.webp",
   },
   {
     title: "Powering Industries with Precision Heat Transfer Solutions.",
-    link: "/",
-    image: "/assets/images/hero-banner.webp",
+    link: "/engineering/",
+    image: "/assets/images/ban4.webp",
+  },
+   {
+    title: "Engineered solutions that enhance process efficiency  and reliability.",
+    link: "/engineering/",
+    image: "/assets/images/ban5.webp",
+  },
+   {
+    title: "Precision Heat Transfer Solutions for Modern Industries.",
+    link: "/engineering/",
+    image: "/assets/images/ban6.webp",
+  },
+   {
+    title: "Where Heat Transfer Powers Industry.",
+    link: "/engineering/",
+    image: "/assets/images/ban7.webp",
   },
 ];
 

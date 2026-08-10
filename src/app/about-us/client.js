@@ -228,13 +228,13 @@ setLeaderPopup(true)
         <div className={`container ${style.heroContainer}`}>
             <div className={style.content}>
             <h1 className='heading'>More than a name, Precision is How We Think, Build, and Engineer Possibilities</h1>
-<p>Built on decades of dedication, Precision Equipments blends innovation with purpose, engineering high-performance solutions that power industries worldwide. With every project, we move closer to being a trusted global force in process technology.</p>
+<p id='company-overview'>Built on decades of dedication, Precision Equipments blends innovation with purpose, engineering high-performance solutions that power industries worldwide. With every project, we move closer to being a trusted global force in process technology.</p>
         </div>
         </div>
     </section>
 
     {/* about section  */}
-    <section className={style.aboutSection}>
+    <section className={style.aboutSection} >
         <div className={`container ${style.aboutContainer}`}>
             <div className={style.image}>
                 <Image src="/assets/images/heater-img.webp" width={750} height={700} alt='Precision Equipments heat exchanger'/>
@@ -242,13 +242,13 @@ setLeaderPopup(true)
             <div className={style.content}>
                 <h2 className='heading common_heading'>Pioneers in Heat Exchanger Manufacturing Since 1981</h2>
                 <p>Precision Equipments has been a leading manufacturer and supplier of Shell and Tube Heat Exchangers and process equipment since 1981, serving key sectors such as Oil & Gas, Petrochemicals, Fertilizers, Power Plants, LNG and Nuclear Energy. With a strong workforce of over 500 employees, the company has successfully delivered more than 5,500 + process equipment units to both Indian and international markets. Our manufacturing facility, strategically located just 45 km from the shipping port, is capable of handling equipment up to 300 MT, ensuring smooth logistics and timely delivery. We strictly adhere to international standards such as ASME, TEMA, EN, PED and API, and our experienced engineering team works closely with EPC contractors to meet stringent technical and project requirements while maintaining high quality and cost efficiency through effective manufacturing practices and strong project management.</p>
-                <p>We have extensive experience in supplying critical and proprietary equipment across various industries, particularly in special materials of construction such as Titanium, Alloy 825, Austenitic stainless steel , and other non-ferrous materials. Our decades of industry experience, technical expertise, and commitment to excellence have positioned us as a trusted and innovative manufacturer, contributing significantly to the advancement of heat exchanger technology in the process industry.</p>
+                <p id='vision-mission'>We have extensive experience in supplying critical and proprietary equipment across various industries, particularly in special materials of construction such as Titanium, Alloy 825, Austenitic stainless steel , and other non-ferrous materials. Our decades of industry experience, technical expertise, and commitment to excellence have positioned us as a trusted and innovative manufacturer, contributing significantly to the advancement of heat exchanger technology in the process industry.</p>
             </div>
         </div>
     </section>
 
     {/* mission vision section  */}
-    <section className={`${style.misvisSection} no_padding_top`}>
+    <section className={`${style.misvisSection} no_padding_top`} >
         <div className={`container ${style.misvisContainer}`}>
 <div className={`${style.card} curve_lines_bg dark_section`}>
     <h3 className='heading'>Vision</h3>
@@ -276,7 +276,7 @@ setLeaderPopup(true)
         <div className={style.card} key={index}>
         <Image className={style.icon} src="/assets/images/why_choose_icon.svg" width={40} height={40} alt=""/>
         <h3 className="heading">{item.title}</h3>
-        <p>{item.content}</p>
+        <p id={index===whyChooseData.length-1?"leadership":""}>{item.content}</p>
         </div>
       ))}      
      </div>
@@ -288,7 +288,7 @@ setLeaderPopup(true)
 
 
     {/* leadership section  */}
-<section className={`${style.leadershipSection}`}>
+<section className={`${style.leadershipSection}`} >
 
       <div className="container section_container">
 
@@ -360,7 +360,7 @@ setLeaderPopup(true)
 
 
     {/* Certificates section  */}
- <section className={`${style.whyChooseSection} ${style.certificatesSection}`}>
+ <section className={`${style.whyChooseSection} ${style.certificatesSection}`} id='accredit'>
 
       <div className="container section_container">
 

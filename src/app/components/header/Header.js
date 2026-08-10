@@ -143,10 +143,10 @@ const handleSubmenuToggle = (path) => (e) => {
       <Link href="/about-us">About Us</Link>
        {mobile &&  <button type="button" onClick={handleSubmenuToggle(['about'])} aria-expanded={isMenuActive(['about'])} aria-label="Toggle About Us submenu" className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
-          <li> <Link href="/about-us">Company Overview</Link> </li>
-          <li> <Link href="/about-us">Vision & Mission</Link> </li>
-          <li> <Link href="/about-us">Leadership</Link> </li>
-          <li> <Link href="/about-us">Accreditations & Certificates</Link> </li>
+          <li> <Link href="/about-us#company-overview">Company Overview</Link> </li>
+          <li> <Link href="/about-us#vision-mission">Vision & Mission</Link> </li>
+          <li> <Link href="/about-us#leadership">Leadership</Link> </li>
+          <li> <Link href="/about-us#accredit">Accreditations & Certificates</Link> </li>
           <li> <Link href="/responsibility">Responsibility</Link> </li>
           <li> <Link href="/clients">Clients</Link> </li>
          </ul>

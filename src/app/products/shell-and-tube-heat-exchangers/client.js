@@ -30,13 +30,66 @@ const productsData = [
       "subTitle": "Trusted Heat Exchange Solutions",
       "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth1.jpg",
+          "text": "C2 Hydrogenation CC Exchanger"
         },
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth2.jpg",
+          "text": "Steam Generator"
         },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth3.jpg",
+          "text": "LP & MP Steam Heat Exchanger"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth4.jpg",
+          "text": "Recycle Gas Cooler"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth5.jpg",
+          "text": "MHC Rector Feed Effluent Exchanger"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth6.jpg",
+          "text": "Vacuum Preconcentrator "
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth7.jpg",
+          "text": "HP Reboiler"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth8.jpg",
+          "text": "Startup Precooler"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth9.jpg",
+          "text": "Process Diluent Super Heater"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth10.jpg",
+          "text": "Diesel Product MP Steam Generator"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth11.jpg",
+          "text": "PW Blowdown Cooler II "
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth12.jpg",
+          "text": "PW Blowdown Cooler"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth13.jpg",
+          "text": "Falling Film Evaporator Monomer Tower Reboiler "
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth14.jpg",
+          "text": "Methanator Feed/Product Exchanger"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/sth15.jpg",
+          "text": "Inlet Header"
+        },
+
       ],
       "content": [
         "Engineered for efficiency and durability, our conventional shell and tube heat exchangers deliver optimal thermal performance across a wide range of industrial applications. Designed to operate under high pressures and temperatures, they ensure reliable and efficient heat transfer even in the most demanding process conditions.",
@@ -49,12 +102,12 @@ const productsData = [
       "subTitle": "Turn Up the Efficiency",
       "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/helix-1.webp",
+          "text": "TT Bitumen Cooler"
         },
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/helix-2.webp",
+          "text": "Helix Bundle"
         },
       ],
       "content": [
@@ -68,12 +121,24 @@ const productsData = [
       "subTitle": "Stable Design Superior Heat Transfer for gas-to-gas applications in PP or PE plants",
      "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/rod1.webp",
+          "text": "Gas Gas Exchanger "
         },
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/rod2.jpg",
+          "text": "Recycle Gas Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/rod3.webp",
+          "text": "Rod Baffle Bundle"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/rod4.webp",
+          "text": "RG Condensers Bundle"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/rod5.webp",
+          "text": "Baffle Arrangements"
         },
       ],
       "content": [
@@ -87,12 +152,28 @@ const productsData = [
       "subTitle": "Where Extreme Cold Meets Smart Engineering",
       "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/cyro1.webp",
           "text": ""
         },
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/cyro2.webp",
+          "text": "LNG Vaporizer"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/cyro3.webp",
+          "text": "LNG Vaporizer"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/cyro4.webp",
+          "text": "LNG Vaporizer"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/cyro5.webp",
+          "text": "LNG Vaporizer"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/cyro6.webp",
+          "text": "LNG Vaporizer"
         },
       ],
       "content": [
@@ -106,12 +187,12 @@ const productsData = [
       "subTitle": "Strength in Pressure, Precision in Heat Transfer",
          "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/hp1.webp",
+          "text": "RG BFW Preheater"
         },
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/hp2.jpg",
+          "text": "DHU (H) Welded Diaphragm HP Exchanger"
         },
       ],
       "content": [
@@ -124,12 +205,16 @@ const productsData = [
       "subTitle": "Finned for Better Performance",
        "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/l1.webp",
+          "text": "Recuperator Tube Bundle"
         },
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/l2.webp",
+          "text": "Recuperator"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/l3.jpg",
+          "text": "Low Fin Tube Refrigerant Condenser"
         },
       ],
       "content": [
@@ -142,11 +227,7 @@ const productsData = [
       "subTitle": "Maximum Heat Transfer, Maximum Performance",
      "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
-        },
-        {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/hfe.webp",
           "text": ""
         },
       ],
@@ -160,13 +241,46 @@ const productsData = [
       "subTitle": "Advanced Condenser Design for Optimized heat transfer",
      "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con1.jpg",
+          "text": "Low Fin Tube Refrigerant Condenser"
         },
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con2.jpg",
+          "text": "Methanol Condenser"
         },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con3.jpg",
+          "text": "Ejector 1st Inter Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con4.jpg",
+          "text": "Refrigerant Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con5.jpg",
+          "text": "Ejector 1st Storage Inter Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con6.jpg",
+          "text": "Circular Steam Surface Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con7.jpg",
+          "text": "V - 450 Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con8.jpg",
+          "text": "Vacuum Effect Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con9.jpg",
+          "text": "CCFU Fractionator Overhead Trim Condenser"
+        },
+        {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/con10.jpg",
+          "text": "Inter Condenser"
+        },
+
       ],
       "content": [
         "A condenser is designed specifically to condense a vapor into liquid by transferring heat to a cooling medium. It consists of a cylindrical shell containing a bundle of tubes, with one fluid flowing inside the tubes and another fluid flowing outside them within the shell. In condenser duty, the vapor (such as steam, hydrocarbon vapours, or refrigerants) typically flows on the shell side, while cooling water or another coolant flows through the tubes. As the vapor loses heat to the coolant, it condenses into liquid, which is then collected and removed.",
@@ -182,12 +296,8 @@ const productsData = [
       "subTitle": "Powering Efficient Steam Generation",
      "images": [
         {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-1.jpg",
-          "text": ""
-        },
-        {
-          "image": "/assets/images/products/shell-and-tube-heat-exchangers/conventional-heat-exchangers-2.jpg",
-          "text": ""
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/fw.jpg",
+          "text": "Feed Water Heaters"
         },
       ],
       "content": [
