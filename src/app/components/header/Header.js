@@ -25,6 +25,23 @@ const [fixed, setFixed] = useState(false);
 const navRef = useRef(null);
 const toggleRef = useRef(null);
 const closeRef = useRef(null);
+const pendingHashRef = useRef(null);
+const resetHoverTimeoutRef = useRef(null);
+
+const [resetHover, setResetHover] = useState(false);
+
+// Body-scroll-lock cleanup (below) only fires once the closed nav has
+// finished releasing `position: fixed`; the target section may also still
+// be mounting if the link navigated to a different page first. Retry across
+// a few frames so both cases resolve without any per-id special-casing.
+const scrollToHashTarget = (targetId, attempts = 0) => {
+  const el = document.getElementById(targetId);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else if (attempts < 30) {
+    requestAnimationFrame(() => scrollToHashTarget(targetId, attempts + 1));
+  }
+};
 
 useEffect(() => {
   const handleScroll = () => {
@@ -67,9 +84,23 @@ useEffect(() => {
     document.body.style.top = "";
     document.body.style.width = "";
     document.body.style.overflow = "";
-    window.scrollTo(0, scrollY);
+
+    const targetId = pendingHashRef.current;
+    pendingHashRef.current = null;
+
+    if (targetId) {
+      scrollToHashTarget(targetId);
+    } else {
+      window.scrollTo(0, scrollY);
+    }
   };
 }, [menuOpen]);
+
+useEffect(() => {
+  return () => {
+    if (resetHoverTimeoutRef.current) clearTimeout(resetHoverTimeoutRef.current);
+  };
+}, []);
 
 useEffect(() => {
   if(!menuOpen) return;
@@ -120,6 +151,29 @@ const handleSubmenuToggle = (path) => (e) => {
   toggleSubmenu(path);
 };
 
+const handleNavLinkClick = (e) => {
+  const anchor = e.target.closest("a");
+  if (!anchor) return;
+
+  const href = anchor.getAttribute("href") || "";
+  const hashIndex = href.indexOf("#");
+  // Only mobile needs the manual scroll below (it's what fights the body
+  // scroll-lock's own restore-scroll cleanup); desktop's native anchor
+  // scroll already works, so don't leave a stale target for a later close.
+  pendingHashRef.current = mobile && hashIndex !== -1 ? href.slice(hashIndex + 1) : null;
+
+  if (mobile) {
+    setMenuOpen(false);
+  }
+
+  // Force-close any dropdown left visually open from :hover so it doesn't
+  // stay stuck across the navigation; normal hover keeps working as soon
+  // as this clears.
+  setResetHover(true);
+  if (resetHoverTimeoutRef.current) clearTimeout(resetHoverTimeoutRef.current);
+  resetHoverTimeoutRef.current = setTimeout(() => setResetHover(false), 350);
+};
+
   return (
     <>
     <header id={style.header} className={fixed?"fixed":""}>
@@ -128,7 +182,12 @@ const handleSubmenuToggle = (path) => (e) => {
     <Image src="/assets/images/logo.svg" width={245} height={64} alt='Precision Equipments' priority/>
   </Link>
 
-<nav ref={navRef} className={menuOpen?style.navOpen:""}>
+<nav
+  ref={navRef}
+  className={`${menuOpen?style.navOpen:""} ${resetHover?style.resetHover:""}`.trim()}
+  onClick={handleNavLinkClick}
+  onMouseLeave={()=>setResetHover(false)}
+>
   <button
     ref={closeRef}
     type="button"

@@ -47,6 +47,13 @@ body:has(header.fixed){
   padding-top: 94px;
 }
 
+/* Keeps any hash/anchor-linked section clear of the fixed header instead
+   of scrolling its top edge underneath it; matches the fixed header's own
+   reserved height above. Generic across every id on the site. */
+[id]{
+  scroll-margin-top: 94px;
+}
+
 header.fixed{
     position: fixed !important;
     top: 0;

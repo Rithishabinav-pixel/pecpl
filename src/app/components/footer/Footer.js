@@ -191,9 +191,9 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
 
         </div>
 
-<div className={style.copyrights} data-aos="fade-up" data-aos-delay="0">
+<div className={style.copyrights}>
     <div className='container'>
-        Copyrights © {year} Precision Equipments (Chennai) Pvt Ltd. All Rights Reserved. Powered by <a href='#' target='_blank'>Pixel Studios.</a>
+        Copyrights © {year} Precision Equipments (Chennai) Pvt Ltd. All Rights Reserved. Powered by <a href='https://www.pixel-studios.com/' target='_blank'>Pixel Studios.</a>
     </div>
 </div>
 

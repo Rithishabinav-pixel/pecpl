@@ -105,6 +105,16 @@
     opacity: 1;
 }
 
+/* Forces any hover-opened dropdown closed right after a nav link is
+   clicked, so it can't stay visually stuck open across a navigation;
+   removed shortly after so normal :hover keeps working. */
+#header .container nav.resetHover ul#main_menu li .subMenu,
+#header .container nav.resetHover ul#main_menu li .subMenu .subMenu.secondarySubMenu{
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+}
+
 #header .container nav ul#main_menu li .subMenu li:hover .subMenu li{
     visibility: visible;
     opacity: 1;
