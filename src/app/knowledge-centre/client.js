@@ -63,7 +63,7 @@ export default function page() {
 <div className={style.newscards}>
     {newsLetterData.length>0 && newsLetterData.map((item,index)=>(
 
-<div className={style.card} key={index}>
+<div className={style.card} key={index} data-aos="zoom-in" data-aos-delay={index*20}>
     <div className={style.image}>
         <Image className={style.featureImage} src={item.image} width={271} height={301} alt={item.title}/>
         <span className={style.date}>{item.date}</span>
@@ -91,13 +91,13 @@ export default function page() {
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Frequently Asked Questions</h2>
-          <p>Find answers to commonly asked questions about our products, processes, capabilities, and services. Whether you’re a customer or collaborator, our FAQs aim to provide clarity and assist your decision-making.</p>
+          <h2 className="common_heading heading" data-aos="fade-up">Frequently Asked Questions</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Find answers to commonly asked questions about our products, processes, capabilities, and services. Whether you’re a customer or collaborator, our FAQs aim to provide clarity and assist your decision-making.</p>
         </div>
 
 <div className={style.accordionContainer}>
   {faqs.map((item,index) => (
-    <div className={style.accordionTab} key={item.id}>
+    <div className={style.accordionTab} key={item.id} data-aos="fade-up" data-aos-delay={index*30}>
       <div className={style.accordionHeader} onClick={()=>setAccActive(index)} >
         <h3 className='heading'>{item.question}</h3>
       </div>

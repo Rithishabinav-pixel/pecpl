@@ -77,7 +77,7 @@ export default function page() {
   <div className={`container ${style.container}`}>
       {/* Images */}
       {product.images?.length > 0 && (
-        <div className={style.image}>
+        <div className={style.image} data-aos={index % 2 !== 0 ?"fade-left":"fade-right"}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             speed={500}
@@ -106,7 +106,7 @@ export default function page() {
       )}
 
       {/* Content */}
-      <div className={style.content}>
+      <div className={style.content} data-aos={index % 2 !== 0 ?"fade-right":"fade-left"}>
         {product.title && (
           <h2 className="common_heading heading">
             {product.title}

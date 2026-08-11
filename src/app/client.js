@@ -66,19 +66,19 @@ const productData = [
     name:"Rod Baffle Exchangers",
     content:"Our rod baffle heat exchangers offer enhanced heat transfer with reduced pressure drop by using rod baffles instead of conventional segmental ones. Designed and manufactured with precision, they’re ideal for high-fouling fluids, offering consistent performance, easy maintenance, and long-term reliability across various industrial sectors.",
     link:"/products/shell-and-tube-heat-exchangers#rod",
-    image:"/assets/images/rod-baffle-heat-exchangers.jpg"
+    image:"/assets/images/rod-baffle-heat-exchangers.webp"
   },
     {
     name:"Helical Baffle Heat Exchangers",
     content:"Our helical baffle heat exchangers are designed to reduce pressure drop and flow-induced vibration while enhancing heat transfer efficiency. With improved fouling resistance and extended service life, they’re a preferred solution for high-performance applications in the petrochemical and process industries.",
     link:"/products/shell-and-tube-heat-exchangers#helixchanger",
-    image:"/assets/images/helixchange.jpg"
+    image:"/assets/images/helixchange.webp"
   },
     {
     name:"Shell and Tube Heat Exchangers",
     content:"Engineered for efficiency and durability, our shell and tube heat exchangers deliver optimal thermal performance across diverse industrial applications. Designed to handle high pressures and temperatures, they ensure reliable heat transfer in demanding process conditions.",
     link:"/products/shell-and-tube-heat-exchangers",
-    image:"/assets/images/shell.jpg"
+    image:"/assets/images/shell.webp"
   },
 ]
 
@@ -167,7 +167,7 @@ export default function Page() {
       disableOnInteraction: false,
     }}
   >
-    {heroBannerData.map((item, index) => (
+    {heroBannerData && heroBannerData.map((item, index) => (
       <SwiperSlide key={index}>
         <div className={style.heroSlide}>
           <Image
@@ -225,17 +225,17 @@ export default function Page() {
 
       <div className="container section_container">
 
-        <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">
+        <div className={`top_content center ${style.top_content}`} >
+          <h2 className="common_heading heading" data-aos="fade-up">
             Transforming Industries Worldwide with Precision Since 1981
           </h2>
-          <p>Precision Equipments is a leading manufacturer of Shell & Tube Heat Exchangers and process equipment, serving critical industries for over three decades. Backed by strong engineering, global standards, and a commitment to quality, we deliver performance-driven solutions that power industrial operations across sectors, including oil & gas, power, petrochemicals, and fertilisers.</p>
-          <Button href={"/about-us"} classname={`light_blue`} text={"Know more"}/>
+          <p data-aos="fade-up" data-aos-delay="100">Precision Equipments is a leading manufacturer of Shell & Tube Heat Exchangers and process equipment, serving critical industries for over three decades. Backed by strong engineering, global standards, and a commitment to quality, we deliver performance-driven solutions that power industrial operations across sectors, including oil & gas, power, petrochemicals, and fertilisers.</p>
+          <Button dataAos="fade-up" dataAosDelay="200" href={"/about-us"} classname={`light_blue`} text={"Know more"}/>
         </div>
 
         <div ref={ref} className={style.counterCards}>
       {counters.map((item, index) => (
-        <div key={index} className={style.card}>
+        <div key={index} className={style.card} data-aos="fade-up" data-aos-delay={index*200}>
           <h3 className="heading common_heading">
             {inView ? (
               <CountUp
@@ -263,18 +263,18 @@ export default function Page() {
 <section className={`${style.productsSection} dark_section curve_lines_bg`}>
    <div className="container section_container">
    <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">
+          <h2 className="common_heading heading" data-aos="fade-up">
             High-Performance Products for Peak Industrial Efficiency
           </h2>
-          <p>Designed for reliability and engineered for performance, our product lineup from a leading heat exchanger manufacturer meets the evolving needs of process-intensive industries. From standard to custom-built heat exchangers and pressure equipment, every unit is crafted with precision to deliver consistent efficiency, enhanced safety, and long-term durability across a wide range of industrial applications.</p>
-          <Button href={"/products"} classname={`white`} text={"Know more"}/>
+          <p data-aos="fade-up" data-aos-delay="100">Designed for reliability and engineered for performance, our product lineup from a leading heat exchanger manufacturer meets the evolving needs of process-intensive industries. From standard to custom-built heat exchangers and pressure equipment, every unit is crafted with precision to deliver consistent efficiency, enhanced safety, and long-term durability across a wide range of industrial applications.</p>
+          <Button dataAos="fade-up" dataAosDelay="200" href={"/products"} classname={`white`} text={"Know more"}/>
         </div>
 
         <div className={style.productCards}>
 
           {
             productData && productData.map((item,index)=>(
-             <div key={index} className={style.card}>
+             <div key={index} className={style.card} data-aos="fade-up" data-aos-delay={index*200}>
 
   <Image src={item.image} width={650} height={519} alt={item.name}/>
   <h3 className="heading">{item.name}</h3>
@@ -297,9 +297,9 @@ export default function Page() {
       <div className="container section_container full_width">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Engineering Success for Industry Titans</h2>
-          <p>Our reputation for engineering success is built upon long-standing partnerships with leading industry titans. Our bespoke heat exchangers and pressure equipment empower their critical operations, delivering reliable and efficient <strong>heat transfer solutions</strong> designed for lasting performance.</p>
-          <Button href={"/industries"} classname={`light_blue`} text={"Know more"}/>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Engineering Success for Industry Titans</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Our reputation for engineering success is built upon long-standing partnerships with leading industry titans. Our bespoke heat exchangers and pressure equipment empower their critical operations, delivering reliable and efficient <strong>heat transfer solutions</strong> designed for lasting performance.</p>
+          <Button dataAos="fade-up" dataAosDelay="200" href={"/industries"} classname={`light_blue`} text={"Know more"}/>
         </div>
 
         {/* industries slider  */}
@@ -329,15 +329,15 @@ export default function Page() {
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">
             Driving Solutions Backed by Strong Capabilities
           </h2>
-          <p>At PECPL, our capabilities go beyond manufacturing. They reflect decades of experience, technical expertise, and a commitment to quality. With strong design proficiency, robust engineering systems, and modern production facilities, we are equipped to deliver precise, reliable solutions customised to the unique demands of global industrial clients.</p>
+          <p data-aos="fade-up" data-aos-delay="100">At PECPL, our capabilities go beyond manufacturing. They reflect decades of experience, technical expertise, and a commitment to quality. With strong design proficiency, robust engineering systems, and modern production facilities, we are equipped to deliver precise, reliable solutions customised to the unique demands of global industrial clients.</p>
         </div>
 
      <div className={style.solutionsCards}>
       {solutionsData && solutionsData.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
           <Image className={style.image} src={item.image} width={384} height={386} alt={item.name}/>
           <h3 className="heading">{item.name}</h3>
           <p>{item.content}</p>
@@ -357,12 +357,12 @@ export default function Page() {
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Why Choose Us</h2>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Why Choose Us</h2>
         </div>
 
      <div className={style.whyChooseCards}>
       {whyChooseData && whyChooseData.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
         <Image src="/assets/images/why_choose_icon.svg" width={40} height={40} alt=""/>
         <h3 className="heading">{item.title}</h3>
         <p>{item.content}</p>

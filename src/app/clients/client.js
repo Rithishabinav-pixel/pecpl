@@ -52,7 +52,7 @@ export default function Page() {
         <div className={style.clients}>
 
           {activeClients && activeClients.map((item,index)=>(
-            <div className={style.logo} key={index} >
+            <div className={style.logo} key={index} data-aos="zoom-in" data-aos-delay={index*20} >
               <Image src={item} alt={labelFromImagePath(item, "Client logo")} width={150}  height={82} />
                </div>
           ))}

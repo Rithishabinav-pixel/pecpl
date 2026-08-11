@@ -245,7 +245,7 @@ export default function Page() {
 
       {/* Form */}
 
-      <section className={`${style.formSection} no_padding_top`}>
+      <section className={`${style.formSection} no_padding_top`} data-aos="fade-up">
         <div className={`container section_container ${style.formContainer}`}>
           <div className={`top_content center ${style.top_content}`}>
             <h2 className="common_heading heading">
@@ -377,13 +377,13 @@ export default function Page() {
       <section className={`${style.locationSection} no_padding_top`}>
         <div className={`container section_container ${style.locationContainer}`}>
           <div className={`top_content center ${style.top_content}`}>
-            <h2 className="common_heading heading">
+            <h2 className="common_heading heading" data-aos="fade-up">
               India Office
             </h2>
           </div>
             <div className={style.locationCards}>
             {locations['india'].map((data,index)=>(
-                    <div className={style.card} key={index} >
+                    <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*100} >
                         <h3 className={style.name}>{data.name}</h3>
                         <div className={style.locationDetails}>
                         <h4>{data.company}</h4>
@@ -431,13 +431,13 @@ export default function Page() {
       <section className={`${style.locationSection} no_padding_top`}>
         <div className={`container section_container ${style.locationContainer}`}>
           <div className={`top_content center ${style.top_content}`}>
-            <h2 className="common_heading heading">
+            <h2 className="common_heading heading" data-aos="fade-up">
               Overseas
             </h2>
           </div>
           <div className={style.locationCards}>
             {locations['overseas'].map((data,index)=>(
-                    <div className={style.card} key={index} >
+                    <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*100}>
                         <h3 className={style.name}>{data.country}</h3>
                         <div className={style.locationDetails}>
                         <h4>{data.company}</h4>

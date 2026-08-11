@@ -59,7 +59,7 @@ export default function Page() {
 
       {/* Responsibility Sections */}
       {pageData.responsibility?.map((responsibility, index) => (
-        <section
+        <section 
           key={responsibility.slug}
           className={`${style.responsibility_section} ${
             index % 2 === 0 ? style.reverse : ""
@@ -68,7 +68,7 @@ export default function Page() {
           <div className={`container ${style.container}`}>
             {/* Images */}
             {responsibility.images?.length > 0 && (
-              <div className={style.image}>
+              <div className={style.image} data-aos={index % 2 === 0 ?"fade-left":"fade-right"}>
                 <Swiper
                   modules={[Autoplay]}
                   speed={500}
@@ -103,7 +103,7 @@ export default function Page() {
             )}
 
             {/* Content */}
-            <div className={style.content}>
+            <div className={style.content} data-aos={index % 2 === 0 ?"fade-right":"fade-left"}>
               {responsibility.title && (
                 <h2 className="common_heading heading">
                   {responsibility.title}
@@ -143,12 +143,12 @@ export default function Page() {
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Precision Industrial Training School</h2>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Precision Industrial Training School</h2>
         </div>
 
      <div className={style.whyChooseCards}>
       {whyChooseData && whyChooseData.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
         <Image src={item.image} width={80} height={80} alt=""/>
         <h3 className="heading">{item.title}</h3>
         <p>{item.content}</p>

@@ -12,7 +12,7 @@ const locations = {
       ],
       "fax": "+91 44 4710 0604",
       "website": null,
-      "locationUrl": "",
+      "locationUrl": "https://www.google.com/maps/place/Precision+Equipments+(Chennai)+Private+Limited/@13.009886,80.00975,17z/data=!3m1!4b1!4m6!3m5!1s0x3a525d0e027f0691:0x2f85109373256afd!8m2!3d13.0098808!4d80.0123249!16s%2Fg%2F11c0r62xrn?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
       
     },
     {
@@ -27,7 +27,7 @@ const locations = {
       ],
       "fax": "+91 44 4710 0604",
       "website": null,
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/ptnhJh7mFFyT8Cxs5",
       
     }
   ],
@@ -41,7 +41,7 @@ const locations = {
       "phones": [],
       "fax": null,
       "website": null,
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/JAM5aBJwuuwC1JSA8",
       
     },
     {
@@ -53,7 +53,7 @@ const locations = {
       "phones": [],
       "fax": null,
       "website": null,
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/PiBQaZLLyTEKrMv39",
       
     },
     {
@@ -67,7 +67,7 @@ const locations = {
       ],
       "fax": null,
       "website": null,
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/5Rp8k1DRNCsNXrZ8A",
       
     },
     {
@@ -82,7 +82,7 @@ const locations = {
       ],
       "fax": null,
       "website": "https://www.petro-q.com",
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/koQmScB1sZpUMzJd6",
       
     },
     {
@@ -98,7 +98,7 @@ const locations = {
       ],
       "fax": "+971 2 6223334/5",
       "website": "https://www.alwazan.ae",
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/ydimLuDdkgcjqBn77",
       
     },
     {
@@ -119,7 +119,7 @@ const locations = {
       ],
       "fax": "+965 2481 0982",
       "website": null,
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/fiHx3waxSD8RfwJt6",
       
     },
     {
@@ -135,7 +135,7 @@ const locations = {
       ],
       "fax": null,
       "website": "https://www.petrovisiongroup.com",
-      "locationUrl": "",
+      "locationUrl": "https://maps.app.goo.gl/ENoxojumLiYkMavZ9",
       
     }
   ]

@@ -13,21 +13,21 @@ export default function FooterCTA() {
     <section className="footer_cta_section">
       <div className="container section_container">
         <div className="top_content center">
-          <h2 className="common_heading heading">
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">
             {isAbout
               ? "Need High-Performance Equipment? Precision is a Click Away."
               : "Get Efficient Solutions for Your Industrial Needs."
               }
           </h2>
 
-          <p>
+          <p data-aos="fade-up" data-aos-delay="100">
             {isAbout
               ? "Connect with us to learn how our 40+ years of engineering excellence can help your business grow with confidence. Our expertise in precision manufacturing ensures reliable performance across diverse industrial applications."
               : "Looking for dependable, high-performance solutions? Let’s talk. We’ll help you find the right equipment for your industrial needs, built with precision and designed to keep your operations running smoothly."
               }
           </p>
 
-          <Button
+          <Button dataAos="fade-up" dataAosDelay="200"
             href="/contact-us"
             classname="white"
             text="Know more"

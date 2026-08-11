@@ -108,7 +108,7 @@ const data = productData?.[0]
       <div className={`container ${style.productsContainer}`}>
 
 {data.products && data.products.map((item,index)=>(
-  <div className={style.card} key={index}>
+  <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
     <div className={style.productImage}>
     <Image  src={item.image} width={1000} height={600} alt={item.name} />
     </div>

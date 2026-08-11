@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className={style.footerCertification}>
             {certification && certification.map((item,index)=>(
- <div key={index}>
+ <div key={index} data-aos="fade-up" data-aos-delay={index*10}>
 <Image src={item} width={86} height={77} alt='Certification badge'/>
             </div>
             ))}
@@ -95,7 +95,7 @@ export default function Footer() {
 
         <div className={style.allMenu}>
 
-            <div className={style.siteDetails}>
+            <div className={style.siteDetails} data-aos="fade-up" data-aos-delay="0">
                 <Image className={style.siteLogo} src="/assets/images/footer-logo.png" width={400} height={105} alt='Precision Equipments'/>
                 <ul className={style.socialLinks}>
                     <li> <a href="https://www.facebook.com/pages/Precision-Equipments-Chennai/315397315333763" target="_blank" rel="noopener noreferrer" aria-label="Facebook"> <Image src="/assets/images/fb-icon.svg" width={24} height={24} alt=''/> </a> </li>
@@ -117,7 +117,7 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
             </div>
 
 
-            <div className={style.menuColumn}>
+            <div className={style.menuColumn} data-aos="fade-up" data-aos-delay="20">
                 <h3>Quick links <button type="button" aria-label="Toggle Quick Links menu" className={activeMenu===1?style.active:""} onClick={()=>setActiveMenu(activeMenu===1?null:1)} > <Image src="/assets/images/plus-icon.svg" width={20} height={20} alt=''/> </button> </h3>
                 <ul>
   <li><Link href="/">Home</Link></li>
@@ -132,7 +132,7 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
 </ul>
             </div>
 
-            <div className={style.menuColumn}>
+            <div className={style.menuColumn} data-aos="fade-up" data-aos-delay="40">
                 <h3>Products <button type="button" aria-label="Toggle Products menu" className={activeMenu===2?style.active:""} onClick={()=>setActiveMenu(activeMenu===2?null:2)}> <Image src="/assets/images/plus-icon.svg" width={20} height={20} alt=''/> </button></h3>
                 <ul>
   <li><Link href="/products/shell-and-tube-heat-exchangers">Shell and Tube Heat Exchangers</Link></li>
@@ -149,7 +149,7 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
 </ul>
             </div>
 
-            <div className={style.menuColumn}>
+            <div className={style.menuColumn} data-aos="fade-up" data-aos-delay="60">
                 <h3>Industries <button type="button" aria-label="Toggle Industries menu" className={activeMenu===3?style.active:""} onClick={()=>setActiveMenu(activeMenu===3?null:3)}> <Image src="/assets/images/plus-icon.svg" width={20} height={20} alt=''/> </button></h3>
                <ul>
   <li><Link href="/industries#oil-and-gas">Oil and Gas</Link></li>
@@ -165,7 +165,7 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
             </div>
 
 
-             <div className={style.newsLetterColumn}>
+             <div className={style.newsLetterColumn} data-aos="fade-up" data-aos-delay="80">
                 <h3>Subscribe to our newsletter</h3>
                <p>Get the latest insights, news, and exclusive updates delivered straight to your inbox.</p>
                <form onSubmit={handleNewsletterSubmit}>
@@ -191,7 +191,7 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
 
         </div>
 
-<div className={style.copyrights}>
+<div className={style.copyrights} data-aos="fade-up" data-aos-delay="0">
     <div className='container'>
         Copyrights © {year} Precision Equipments (Chennai) Pvt Ltd. All Rights Reserved. Powered by <a href='#' target='_blank'>Pixel Studios.</a>
     </div>

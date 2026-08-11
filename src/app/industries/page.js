@@ -50,12 +50,12 @@ export default function page() {
 
       {/* Image  */}
 
-      <div className={style.image}>
+      <div className={style.image} data-aos={index % 2 !== 0 ?"fade-left":"fade-right"}>
         <Image src={industry.image} width={690} height={600} alt={industry.title}/>
       </div>
 
       {/* Content */}
-      <div className={`${style.content}`}>
+      <div className={`${style.content}`} data-aos={index % 2 !== 0 ?"fade-right":"fade-left"}>
         {industry.title && (
           <h2 className="common_heading heading">
             {industry.title}

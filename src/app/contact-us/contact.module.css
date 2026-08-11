@@ -270,6 +270,19 @@ color: var(--light-blue);
 .locationCards .card .name{
     padding-bottom: 20px;
     border-bottom: solid rgba(0, 0, 0, 0.2) 1px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.locationCards .card .name::before{
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: #00C807;
 }
 
 .viewLocation{

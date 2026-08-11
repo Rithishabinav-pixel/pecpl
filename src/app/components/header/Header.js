@@ -236,7 +236,7 @@ const handleSubmenuToggle = (path) => (e) => {
 </div>
 
 <div className={style.fixed_goldenJubilee}>
-  <Image src='/assets/images/header-fixed.png' width={100} height={112} alt='Precision Equipments anniversary badge' />
+  <Image src='/assets/images/header-fixed.webp' width={100} height={112} alt='Precision Equipments anniversary badge' />
 </div>
     </header>
 

@@ -140,7 +140,7 @@ export default function page() {
   <div className={`container ${style.container}`}>
       {/* Images */}
       {product.images?.length > 0 && (
-        <div className={style.image}>
+        <div className={style.image} data-aos={index % 2 !== 0 ?"fade-left":"fade-right"}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             speed={500}
@@ -169,7 +169,7 @@ export default function page() {
       )}
 
       {/* Content */}
-      <div className={style.content}>
+      <div className={style.content} data-aos={index % 2 !== 0 ?"fade-right":"fade-left"}>
         {product.title && (
           <h2 className="common_heading heading">
             {product.title}
@@ -200,7 +200,7 @@ export default function page() {
 
 
   {product.additionalText?.length > 0 && (
-  <div className={style.additionalText}>
+  <div className={style.additionalText} data-aos="fade-up">
     {product.additionalText.map((text, i) => (
       <p key={`additional-${i}`}>{text}</p>
     ))}
@@ -221,12 +221,12 @@ export default function page() {
 <section className={`${style.technicalSection} gray_section`}>
   <div className={`container ${style.container}`}>
 
-    <h2 className='heading common_heading'>Technical Specification</h2>
+    <h2 className='heading common_heading' data-aos="fade-up">Technical Specification</h2>
 
-    <div className={style.technicalChart}>
+    <div className={style.technicalChart} data-aos="fade-right">
       <Image src={productsData?.[0]?.technicalChart} width={1721} height={1466} alt='Plate & Frame Heat Exchanger technical specification chart'/>
     </div>
-    <div className={style.technicalImage}>
+    <div className={style.technicalImage} data-aos="fade-left">
       <Image src={productsData?.[0]?.technicalImage} width={1721} height={1466} alt='Plate & Frame Heat Exchanger technical drawing'/>
     </div>
 
@@ -239,13 +239,13 @@ export default function page() {
 <section className={`${style.pheSection}`}>
   <div className={`container ${style.container}`}>
 
-    <h2 className='heading common_heading'>Exploded view of PHE</h2>
+    <h2 className='heading common_heading' data-aos="fade-up">Exploded view of PHE</h2>
 
-    <div className={style.pheContainer}>
-      <div className={style.image}>
+    <div className={style.pheContainer} data-aos="fade-up">
+      <div className={style.image} >
         <Image src={productsData?.[0]?.phe?.[0]?.image} width={761} height={536} alt="Exploded view of Plate & Frame Heat Exchanger" />
       </div>
-      <div className={`curve_lines_bg ${style.content}`}>
+      <div className={`curve_lines_bg ${style.content}`} >
         <h3 className='heading common_heading'>{productsData?.[0]?.phe?.[0]?.listTitle}</h3>
         <ul>
           {productsData?.[0]?.phe?.[0]?.listContent.map((item,index)=>(
@@ -265,12 +265,12 @@ export default function page() {
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">{productsData?.[0]?.industrialExcellenceTitle}</h2>
+          <h2 className="common_heading heading" data-aos="fade-up">{productsData?.[0]?.industrialExcellenceTitle}</h2>
         </div>
 
      <div className={style.industrialExcellenceCards}>
       {industrialExcellenceData && industrialExcellenceData.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
         <Image src={item.image} width={64} height={64} alt=""/>
         <h3 className="heading">{item.title}</h3>
         <p>{item.content}</p>

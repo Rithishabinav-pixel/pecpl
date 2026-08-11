@@ -73,26 +73,26 @@ export default function page() {
     <section className={`${style.FacilitiesSection} ${style.splitSection} gray_section`}>
           <div className={`container ${style.splitContainer}`}>
 
-            <div className={style.image}>
+            <div className={style.image} data-aos="fade-right" data-aos-delay="0">
     <Image src="/assets/images/manufacturing-img.webp" width={700} height={542} alt='Precision Equipments manufacturing facility'/>
 </div>
 
 <div className={style.content}>
-    <h2 className='heading common_heading'>Facilities</h2>
-    <p className={style.subHeading}>Total Area: 20,000 sq.MT</p>
-    <p>The company operates a well-laid-out facility equipped with a full range of machinery and tools required to manufacture high-quality products within committed delivery timelines. The plant includes an in-house radiography enclosure, heat treatment furnace, grit blasting setup, and a paint booth.</p>
-    <p>The in-house machine shop not only supports our machining requirements but also caters to subcontracting needs for valve industries, automotive, power plants, earthmoving equipment, and forging units</p>
+    <h2 className='heading common_heading' data-aos="fade-up" data-aos-delay="0">Facilities</h2>
+    <p className={style.subHeading} data-aos="fade-up" data-aos-delay="100">Total Area: 20,000 sq.MT</p>
+    <p data-aos="fade-up" data-aos-delay="200">The company operates a well-laid-out facility equipped with a full range of machinery and tools required to manufacture high-quality products within committed delivery timelines. The plant includes an in-house radiography enclosure, heat treatment furnace, grit blasting setup, and a paint booth.</p>
+    <p data-aos="fade-up" data-aos-delay="300">The in-house machine shop not only supports our machining requirements but also caters to subcontracting needs for valve industries, automotive, power plants, earthmoving equipment, and forging units</p>
 <div className={style.pointsCard}>
-    <h4 className='heading'>Fabrication Capability</h4>
-    <div className={style.card}>
+    <h4 className='heading' data-aos="fade-up" data-aos-delay="500">Fabrication Capability</h4>
+    <div className={style.card} data-aos="fade-up" data-aos-delay="600">
         <h5 className='heading'>5M</h5>
         <p>Diameter</p>
     </div>
-    <div className={style.card}>
+    <div className={style.card} data-aos="fade-up" data-aos-delay="650">
         <h5 className='heading'>30M</h5>
         <p>Length</p>
     </div>
-    <div className={style.card}>
+    <div className={style.card} data-aos="fade-up" data-aos-delay="700">
         <h5 className='heading'>300MT</h5>
         <p>Single Shipment Weight</p>
     </div>
@@ -109,13 +109,13 @@ export default function page() {
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Machineries</h2>
-          <p>Our production is supported by a wide range of modern machinery that makes quality fabrication simple and consistent. We use equipment, from CNC cutting, bending, and drilling machines to specialised welding, heat treatment furnaces, and finishing booths, that helps us precisely manufacture every component. This balanced mix of technology ensures our processes run smoothly while meeting the required standards for reliable and efficient process equipment.</p>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Machineries</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Our production is supported by a wide range of modern machinery that makes quality fabrication simple and consistent. We use equipment, from CNC cutting, bending, and drilling machines to specialised welding, heat treatment furnaces, and finishing booths, that helps us precisely manufacture every component. This balanced mix of technology ensures our processes run smoothly while meeting the required standards for reliable and efficient process equipment.</p>
         </div>
 
      <div className={style.machinerieCards}>
       {machinerie && machinerie.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*100}>
             <div className={style.image}>
         <Image src={item.image} width={700} height={887} alt={item.title}/>
         </div>

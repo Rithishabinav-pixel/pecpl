@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Button({href,classname,text,target,setpopup}) {
+export default function Button({dataAos,dataAosDelay,href,classname,text,target,setpopup}) {
 
   const handleClick = (e) =>{
     if (setpopup) {
@@ -13,7 +13,7 @@ export default function Button({href,classname,text,target,setpopup}) {
   }
 
   return (
-    <Link target={target}  href={href} className={`common_btn ${classname}`} onClick={handleClick}>
+    <Link target={target} data-aos={dataAos?dataAos:""} data-aos-delay={dataAosDelay?dataAosDelay:""}  href={href} className={`common_btn ${classname}`} onClick={handleClick}>
         <span className='circle'></span>
         <span className='text'>{text}</span>
     </Link>

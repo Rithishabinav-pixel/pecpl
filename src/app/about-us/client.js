@@ -228,7 +228,7 @@ setLeaderPopup(true)
         <div className={`container ${style.heroContainer}`}>
             <div className={style.content}>
             <h1 className='heading'>More than a name, Precision is How We Think, Build, and Engineer Possibilities</h1>
-<p id='company-overview'>Built on decades of dedication, Precision Equipments blends innovation with purpose, engineering high-performance solutions that power industries worldwide. With every project, we move closer to being a trusted global force in process technology.</p>
+<p id='company-overview' >Built on decades of dedication, Precision Equipments blends innovation with purpose, engineering high-performance solutions that power industries worldwide. With every project, we move closer to being a trusted global force in process technology.</p>
         </div>
         </div>
     </section>
@@ -236,10 +236,10 @@ setLeaderPopup(true)
     {/* about section  */}
     <section className={style.aboutSection} >
         <div className={`container ${style.aboutContainer}`}>
-            <div className={style.image}>
+            <div className={style.image} data-aos="fade-right" data-aos-delay="0">
                 <Image src="/assets/images/heater-img.webp" width={750} height={700} alt='Precision Equipments heat exchanger'/>
             </div>
-            <div className={style.content}>
+            <div className={style.content} data-aos="fade-left" data-aos-delay="0">
                 <h2 className='heading common_heading'>Pioneers in Heat Exchanger Manufacturing Since 1981</h2>
                 <p>Precision Equipments has been a leading manufacturer and supplier of Shell and Tube Heat Exchangers and process equipment since 1981, serving key sectors such as Oil & Gas, Petrochemicals, Fertilizers, Power Plants, LNG and Nuclear Energy. With a strong workforce of over 500 employees, the company has successfully delivered more than 5,500 + process equipment units to both Indian and international markets. Our manufacturing facility, strategically located just 45 km from the shipping port, is capable of handling equipment up to 300 MT, ensuring smooth logistics and timely delivery. We strictly adhere to international standards such as ASME, TEMA, EN, PED and API, and our experienced engineering team works closely with EPC contractors to meet stringent technical and project requirements while maintaining high quality and cost efficiency through effective manufacturing practices and strong project management.</p>
                 <p id='vision-mission'>We have extensive experience in supplying critical and proprietary equipment across various industries, particularly in special materials of construction such as Titanium, Alloy 825, Austenitic stainless steel , and other non-ferrous materials. Our decades of industry experience, technical expertise, and commitment to excellence have positioned us as a trusted and innovative manufacturer, contributing significantly to the advancement of heat exchanger technology in the process industry.</p>
@@ -250,11 +250,11 @@ setLeaderPopup(true)
     {/* mission vision section  */}
     <section className={`${style.misvisSection} no_padding_top`} >
         <div className={`container ${style.misvisContainer}`}>
-<div className={`${style.card} curve_lines_bg dark_section`}>
+<div className={`${style.card} curve_lines_bg dark_section`} data-aos="fade-right" data-aos-delay="0">
     <h3 className='heading'>Vision</h3>
     <p>To be a globally respected high-performance organisation providing technology products for the process industry.</p>
 </div>
-<div className={`${style.card} curve_lines_bg dark_section`}>
+<div className={`${style.card} curve_lines_bg dark_section`} data-aos="fade-left" data-aos-delay="0">
     <h3 className='heading'>Mission</h3>
     <p>To be innovative and advanced in the engineering and manufacture of critical process equipment.</p>
 </div>
@@ -268,12 +268,12 @@ setLeaderPopup(true)
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Why Choose Us</h2>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Why Choose Us</h2>
         </div>
 
      <div className={style.whyChooseCards}>
       {whyChooseData && whyChooseData.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
         <Image className={style.icon} src="/assets/images/why_choose_icon.svg" width={40} height={40} alt=""/>
         <h3 className="heading">{item.title}</h3>
         <p id={index===whyChooseData.length-1?"leadership":""}>{item.content}</p>
@@ -293,19 +293,19 @@ setLeaderPopup(true)
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Leadership</h2>
+          <h2 className="common_heading heading" data-aos="fade-up">Leadership</h2>
         </div>
 
      <div className={style.leadershipCards}>
       {leadershipData && leadershipData.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
         <Image className={style.leadershipImage} src={item.image} width={330} height={322} alt={item.name}/>
         <h3 className="heading">{item.name}</h3>
         <div>
             <p>{item.position}</p>
             <span>{item.tag}</span>
         </div>
-        <button onClick={()=>OpenLeadershipPopup(item)} className="lightblue_btn link_btn">View Profile
+        <button data-aos="fade-up" data-aos-delay="100" onClick={()=>OpenLeadershipPopup(item)} className="lightblue_btn link_btn">View Profile
             <Image className="arrow" src="/assets/images/link-arrow-lightblue.svg" width={24} height={24} alt=""/>
         </button>
         </div>
@@ -325,11 +325,11 @@ setLeaderPopup(true)
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Engineering Excellence with a Worldwide Footprint</h2>
-          <p>With a growing presence across India, Malaysia, the USA, Saudi Arabia, Oman, Qatar, Kuwait, and the UAE, we bring world-class engineering solutions closer to clients. Our global footprint reflects our commitment to timely delivery, reliable partnerships, and building trust beyond borders. Each location is a testament to our precision-driven growth and client-first approach.</p>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Engineering Excellence with a Worldwide Footprint</h2>
+          <p data-aos="fade-up" data-aos-delay="100">With a growing presence across India, Malaysia, the USA, Saudi Arabia, Oman, Qatar, Kuwait, and the UAE, we bring world-class engineering solutions closer to clients. Our global footprint reflects our commitment to timely delivery, reliable partnerships, and building trust beyond borders. Each location is a testament to our precision-driven growth and client-first approach.</p>
         </div>
 
-    <div className={style.mapArea}>
+    <div className={style.mapArea} data-aos="fade-up" data-aos-delay="200">
 <Image className={style.mapImg} src="/assets/images/map.svg" width={1170} height={640} alt='' />
 {mapData.map((item,index)=>(
     <div className={`${style.pin} ${style[`index${index}`]}`} key={index}>
@@ -365,13 +365,13 @@ setLeaderPopup(true)
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Accreditations & Certificates</h2>
-          <p>Every certificate is a mark of our dedicated commitment to brilliance. With globally recognised accreditations including ASME U & U2 Stamps, ISO standards, and PED approval, we meet the most stringent industry requirements, ensuring trust, safety, and performance in every product we deliver. These certifications reinforce our dedication to quality, compliance, and continuous improvement.</p>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Accreditations & Certificates</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Every certificate is a mark of our dedicated commitment to brilliance. With globally recognised accreditations including ASME U & U2 Stamps, ISO standards, and PED approval, we meet the most stringent industry requirements, ensuring trust, safety, and performance in every product we deliver. These certifications reinforce our dedication to quality, compliance, and continuous improvement.</p>
         </div>
 
      <div className={style.whyChooseCards}>
       {certificationData && certificationData.map((item,index)=>(
-        <div className={style.card} key={index}>
+        <div className={style.card} key={index} data-aos="fade-up" data-aos-delay={index*200}>
             {item.icon?
             <Image className={style.icon} src={item.icon} width={70} height={71} alt={item.title}/>
             :
@@ -396,14 +396,14 @@ setLeaderPopup(true)
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Enlistments</h2>
-          <p>Over the years, Precision Equipments has earned approvals and enlistments from top global consultants, EPCs, and end users. These recognitions validate our technical expertise, manufacturing capabilities, and commitment to delivering performance-driven process equipment that meets international expectations. They reflect the trust built through decades of reliable partnerships.</p>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Enlistments</h2>
+          <p data-aos="fade-up" data-aos-delay="200">Over the years, Precision Equipments has earned approvals and enlistments from top global consultants, EPCs, and end users. These recognitions validate our technical expertise, manufacturing capabilities, and commitment to delivering performance-driven process equipment that meets international expectations. They reflect the trust built through decades of reliable partnerships.</p>
         </div>
 
 <div className={style.enlistmentsPoints}>
     <ul>
        {enlishmentData.map((item,index)=>(
-        <li key={index}>{item}</li>
+        <li key={index} data-aos="fade-up" data-aos-delay={index*25}>{item}</li>
        ))}
     </ul>
 </div>
@@ -419,15 +419,15 @@ setLeaderPopup(true)
       <div className="container section_container">
 
         <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading">Memberships</h2>
-          <p>Precision is an active member of reputed industry bodies and technical associations that promote innovation, standardisation, and global collaboration. These memberships reflect our commitment to staying informed, connected, and ahead in delivering exceptional process equipment solutions.</p>
+          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Memberships</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Precision is an active member of reputed industry bodies and technical associations that promote innovation, standardisation, and global collaboration. These memberships reflect our commitment to staying informed, connected, and ahead in delivering exceptional process equipment solutions.</p>
         </div>
 
 <div className={style.membershipLogos}>
     
        {membershipLogos.map((item,index)=>(
         <div className={style.logo} key={index}>
-            <Image src={item} height={250} width={100} alt={labelFromImagePath(item, "Membership logo")}/>
+            <Image src={item} height={100} width={250} alt={labelFromImagePath(item, "Membership logo")}/>
         </div>
        ))}
    
