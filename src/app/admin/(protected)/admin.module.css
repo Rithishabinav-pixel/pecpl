@@ -97,6 +97,60 @@
   margin: 0 0 24px;
 }
 
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.pageHeader h1 {
+  margin: 0 0 24px;
+}
+
+.exportBtn {
+  padding: 10px 20px;
+  border: solid var(--dark-blue) 1px;
+  background: none;
+  color: var(--dark-blue);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.exportBtn:hover:not(:disabled) {
+  background: var(--dark-blue);
+  color: white;
+}
+
+.exportBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.deleteLink {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #c0392b;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.deleteLink:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;

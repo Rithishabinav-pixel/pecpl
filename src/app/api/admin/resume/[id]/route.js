@@ -1,14 +1,10 @@
-import { cookies } from "next/headers";
 import { readFile } from "fs/promises";
 import prisma from "@/lib/prisma";
-import { ADMIN_SESSION_COOKIE, isValidAdminSession } from "@/lib/adminAuth";
+import { isAdminRequestAuthorized } from "@/lib/adminAuth";
 import { getResumeAbsolutePath, getResumeContentType } from "@/lib/resumeStorage";
 
 export async function GET(request, { params }) {
-  const cookieStore = await cookies();
-  const session = cookieStore.get(ADMIN_SESSION_COOKIE);
-
-  if (!isValidAdminSession(session?.value)) {
+  if (!(await isAdminRequestAuthorized())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 

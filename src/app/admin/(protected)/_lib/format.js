@@ -1,6 +1,1 @@
-export function formatDate(date) {
-  return new Intl.DateTimeFormat("en-IN", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
-}
+export { formatDate } from "@/lib/format";

@@ -2,6 +2,8 @@ import Link from "next/link";
 import prisma from "@/lib/prisma";
 import style from "../admin.module.css";
 import { formatDate } from "./format";
+import ExportButton from "./ExportButton";
+import DeleteButton from "./DeleteButton";
 
 const PAGE_SIZE = 20;
 
@@ -25,7 +27,10 @@ export default async function EnquiryTable({ formType, title, basePath, searchPa
 
   return (
     <div>
-      <h1>{title}</h1>
+      <div className={style.pageHeader}>
+        <h1>{title}</h1>
+        <ExportButton endpoint={`/api/admin/enquiry/export?formType=${formType}`} />
+      </div>
 
       {enquiries.length === 0 ? (
         <p className={style.empty}>No entries yet.</p>
@@ -56,9 +61,12 @@ export default async function EnquiryTable({ formType, title, basePath, searchPa
                 </td>
                 <td>{formatDate(enquiry.createdAt)}</td>
                 <td>
-                  <Link className={style.viewLink} href={`${basePath}/${enquiry.id}`}>
-                    View
-                  </Link>
+                  <div className={style.actions}>
+                    <Link className={style.viewLink} href={`${basePath}/${enquiry.id}`}>
+                      View
+                    </Link>
+                    <DeleteButton endpoint={`/api/admin/enquiry/${enquiry.id}`} />
+                  </div>
                 </td>
               </tr>
             ))}

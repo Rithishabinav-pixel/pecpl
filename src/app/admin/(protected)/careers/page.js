@@ -2,6 +2,8 @@ import Link from "next/link";
 import prisma from "@/lib/prisma";
 import style from "../admin.module.css";
 import { formatDate } from "../_lib/format";
+import ExportButton from "../_lib/ExportButton";
+import DeleteButton from "../_lib/DeleteButton";
 
 const PAGE_SIZE = 20;
 
@@ -22,7 +24,10 @@ export default async function AdminCareersPage({ searchParams }) {
 
   return (
     <div>
-      <h1>Careers</h1>
+      <div className={style.pageHeader}>
+        <h1>Careers</h1>
+        <ExportButton endpoint="/api/admin/careers/export" />
+      </div>
 
       {applications.length === 0 ? (
         <p className={style.empty}>No applications yet.</p>
@@ -57,9 +62,12 @@ export default async function AdminCareersPage({ searchParams }) {
                 </td>
                 <td>{formatDate(application.createdAt)}</td>
                 <td>
-                  <Link className={style.viewLink} href={`/admin/careers/${application.id}`}>
-                    View
-                  </Link>
+                  <div className={style.actions}>
+                    <Link className={style.viewLink} href={`/admin/careers/${application.id}`}>
+                      View
+                    </Link>
+                    <DeleteButton endpoint={`/api/admin/careers/${application.id}`} />
+                  </div>
                 </td>
               </tr>
             ))}

@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import { cookies } from "next/headers";
 
 export const ADMIN_SESSION_COOKIE = "admin_session";
 
@@ -12,4 +13,10 @@ export function getAdminSessionToken() {
 export function isValidAdminSession(token) {
   if (!token) return false;
   return token === getAdminSessionToken();
+}
+
+export async function isAdminRequestAuthorized() {
+  const cookieStore = await cookies();
+  const session = cookieStore.get(ADMIN_SESSION_COOKIE);
+  return isValidAdminSession(session?.value);
 }

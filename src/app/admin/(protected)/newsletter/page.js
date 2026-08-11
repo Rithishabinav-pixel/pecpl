@@ -1,15 +1,11 @@
 import Link from "next/link";
 import prisma from "@/lib/prisma";
 import style from "../admin.module.css";
+import { formatDate } from "@/lib/format";
+import ExportButton from "../_lib/ExportButton";
+import DeleteButton from "../_lib/DeleteButton";
 
 const PAGE_SIZE = 20;
-
-function formatDate(date) {
-  return new Intl.DateTimeFormat("en-IN", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
-}
 
 export default async function AdminNewsletterPage({ searchParams }) {
   const { page: pageParam } = await searchParams;
@@ -28,7 +24,10 @@ export default async function AdminNewsletterPage({ searchParams }) {
 
   return (
     <div>
-      <h1>Newsletter Subscriptions</h1>
+      <div className={style.pageHeader}>
+        <h1>Newsletter Subscriptions</h1>
+        <ExportButton endpoint="/api/admin/newsletter/export" />
+      </div>
 
       {subscriptions.length === 0 ? (
         <p className={style.empty}>No subscriptions yet.</p>
@@ -38,6 +37,7 @@ export default async function AdminNewsletterPage({ searchParams }) {
             <tr>
               <th>Email</th>
               <th>Date</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -45,6 +45,9 @@ export default async function AdminNewsletterPage({ searchParams }) {
               <tr key={subscription.id}>
                 <td>{subscription.email}</td>
                 <td>{formatDate(subscription.createdAt)}</td>
+                <td>
+                  <DeleteButton endpoint={`/api/admin/newsletter/${subscription.id}`} />
+                </td>
               </tr>
             ))}
           </tbody>
