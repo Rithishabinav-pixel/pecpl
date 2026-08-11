@@ -126,6 +126,10 @@ Tiruvallur- 631 402, Tamilnadu, India.</a>  </li>
   <li><Link href="/knowledge-centre">Knowledge Centre</Link></li>
   <li><Link href="/career">Career</Link></li>
   <li><Link href="/contact-us">Contact Us</Link></li>
+</ul>
+  <h3>
+Capability <button type="button" aria-label="Toggle Quick Links menu" className={activeMenu===5?style.active:""} onClick={()=>setActiveMenu(activeMenu===5?null:5)} > <Image src="/assets/images/plus-icon.svg" width={20} height={20} alt=''/> </button> </h3>
+                <ul>
   <li><Link href="/engineering">Engineering</Link></li>
   <li><Link href="/manufacturing-facilities-machinery">Manufacturing</Link></li>
   <li><Link href="/logistics">Logistics</Link></li>

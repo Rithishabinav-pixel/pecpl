@@ -171,6 +171,18 @@ font-weight: 900;
   height: auto;
 }
 
+.staticText{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+}
+
 /* responsive */
 
 @media screen and (max-width:1470px) {
@@ -184,6 +196,11 @@ font-weight: 900;
 
 /* tablet  */
 @media screen and (max-width:1200px){
+
+  .aboutSection .counterCards .card h3{
+font-size: 40px;
+line-height:48px;
+}
 
   .industrySection .industries_slider{
   gap: 30px;
@@ -220,6 +237,11 @@ gap: 16px;
 
 /* mobile  */
 @media screen and (max-width:767px) {
+
+  .staticText{
+    font-size: 10px;
+    line-height: 16px;
+  }
 
   .productsSection .productCards .card:nth-child(2){
   margin-top: 0px;

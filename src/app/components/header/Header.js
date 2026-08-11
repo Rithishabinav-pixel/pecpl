@@ -157,18 +157,14 @@ const handleNavLinkClick = (e) => {
 
   const href = anchor.getAttribute("href") || "";
   const hashIndex = href.indexOf("#");
-  // Only mobile needs the manual scroll below (it's what fights the body
-  // scroll-lock's own restore-scroll cleanup); desktop's native anchor
-  // scroll already works, so don't leave a stale target for a later close.
+ 
   pendingHashRef.current = mobile && hashIndex !== -1 ? href.slice(hashIndex + 1) : null;
 
   if (mobile) {
     setMenuOpen(false);
   }
 
-  // Force-close any dropdown left visually open from :hover so it doesn't
-  // stay stuck across the navigation; normal hover keeps working as soon
-  // as this clears.
+ 
   setResetHover(true);
   if (resetHoverTimeoutRef.current) clearTimeout(resetHoverTimeoutRef.current);
   resetHoverTimeoutRef.current = setTimeout(() => setResetHover(false), 350);

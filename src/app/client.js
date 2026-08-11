@@ -151,6 +151,12 @@ export default function Page() {
  <PreloadHeroImage />
     {/* hero section  */}
   <section className={style.heroSection}>
+    <div className={style.staticText}>
+    <div className="container">
+      "Heat Transfer is Our Strength. Process Equipment is Our Business"
+    </div>
+    </div>
+
   <Swiper
     modules={[EffectFade, Navigation, Pagination, Autoplay]}
     effect="fade"
