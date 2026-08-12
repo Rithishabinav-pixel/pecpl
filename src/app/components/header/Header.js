@@ -178,6 +178,12 @@ const handleNavLinkClick = (e) => {
     <Image src="/assets/images/logo.svg" width={245} height={64} alt='Precision Equipments' priority/>
   </Link>
 
+  {mobile && 
+  <div className={style.mobile_fixed_goldenJubilee}>
+  <Image src='/assets/images/header-fixed.svg' width={100} height={112} alt='Precision Equipments anniversary badge' />
+</div>
+  }
+
 <nav
   ref={navRef}
   className={`${menuOpen?style.navOpen:""} ${resetHover?style.resetHover:""}`.trim()}
@@ -275,6 +281,9 @@ const handleNavLinkClick = (e) => {
 </nav>
 
 
+ {mobile && 
+  <a href='tel:919677255201' className={style.mobile_call_icon}> <Image src="/assets/images/header-call.svg" width={24} height={24} alt='mobile'/> </a>
+  }
 <Button setpopup={setPopup}  href={"#"} classname={`dark_blue ${style.header_btn}`} text={"Request a quote"}/>
 
 <button
@@ -291,7 +300,7 @@ const handleNavLinkClick = (e) => {
 </div>
 
 <div className={style.fixed_goldenJubilee}>
-  <Image src='/assets/images/header-fixed.webp' width={100} height={112} alt='Precision Equipments anniversary badge' />
+  <Image src='/assets/images/header-fixed.svg' width={100} height={112} alt='Precision Equipments anniversary badge' />
 </div>
     </header>
 

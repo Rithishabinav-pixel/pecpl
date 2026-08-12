@@ -1,12 +1,14 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import style from './Footer.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { validateNewsletterEmail } from '@/lib/validation'
 import apiClient from '@/lib/apiClient'
+import Button from '../ui/button'
+import RequestQuote from '../request-quote/RequestQuote'
 
 // footer certification data 
 
@@ -29,6 +31,31 @@ const year = new Date().getFullYear();
 
 
 export default function Footer() {
+
+    const [popup,setPopup] = useState(false);
+
+     const [mobile,setMobile] = useState(false);
+
+
+     useEffect(() => {
+      
+     
+       const checkDevice = () =>{
+         const width = window.innerWidth;
+         const isMobile = width<1200;
+         setMobile(isMobile);
+       }
+     
+       checkDevice();
+     
+       window.addEventListener("resize", checkDevice);
+     
+       return () => {
+         window.removeEventListener("resize", checkDevice);
+     
+       };
+     }, []);
+
   const router = useRouter();
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterError, setNewsletterError] = useState(null);
@@ -80,6 +107,10 @@ export default function Footer() {
   };
 
   return (
+
+
+    <>
+
     <footer id={`${style.footer}`} className='dark_section'>
         <div className='container'>
 
@@ -202,5 +233,15 @@ Capability <button type="button" aria-label="Toggle Quick Links menu" className=
 </div>
 
     </footer>
+
+{mobile && 
+<Button setpopup={setPopup}  href={"#"} classname={`light_blue ${style.mobile_fixed_btn}`} text={"Request a quote"}/>
+}
+
+{popup && 
+<RequestQuote setpopup={setPopup}/>
+}
+
+    </>
   )
 }

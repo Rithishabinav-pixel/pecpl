@@ -199,6 +199,10 @@
     width: auto;
 }
 
+.mobile_call_icon{
+    display: none;
+}
+
 
 @media screen and (max-width:1700px) {
     
@@ -250,8 +254,15 @@
 /* tablet  */
 @media screen and (max-width:1200px) {
 
+
+     .mobile_fixed_goldenJubilee img{
+        height: auto;
+        width: 50px;
+        float: left;
+     }
+
     .fixed_goldenJubilee{
-      height: calc(100% - 20px);
+     display: none;
 }
 
     #header .container nav ul#main_menu li .subMenu li:hover{
@@ -365,6 +376,7 @@ width: 20px;
  #header .container{
     position: relative;
     z-index: 999;
+    gap: 12px;
  }
 
     #header .container nav{
@@ -409,7 +421,6 @@ width: 20px;
 
     .menuToggle{
         display: flex;
-        margin-right: 8vw;
     }
 
     #header .container nav{
@@ -448,17 +459,38 @@ width: 20px;
 /* mobile  */
 @media screen and (max-width:767px) {
 
+    .mobile_call_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    width: 42px;
+    background-color: var(--dark-blue);
+    border-radius: 50px;
+    margin-left: auto;
+}
+
+.mobile_call_icon img{
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+     .mobile_fixed_goldenJubilee img{
+        width: 40px;
+     }
+
     .header_btn{
        display: none;
     }
 
       .logo{
-    width: 180px;
+    width: 140px;
 }
 
  .menuToggle{
-        margin-right: 15vw;
-        margin-left: auto;
+        margin-right: 0;
+        margin-left: 10px;
     }
     
 }

@@ -16,6 +16,9 @@ const closePopup = () =>{
 
   const generateRandomNumber = () => Math.floor(Math.random() * 9) + 1;
 
+    const [inputTouch,setInputTouch] = useState(false);
+  
+
   const [captchaNumbers, setCaptchaNumbers] = useState({
     number1: 0,
     number2: 0,
@@ -49,6 +52,7 @@ const closePopup = () =>{
   }, []);
 
   const handleChange = (e) => {
+    setInputTouch(true)
     const { name, value } = e.target;
 
     setFormData((prev) => ({
@@ -212,7 +216,8 @@ const closePopup = () =>{
               onChange={handleChange}
             />
           </div>
-
+          
+{inputTouch &&
           <div className={style.captcha}>
             <div>
               <p>Please prove you are human by solving this calculation</p>
@@ -249,6 +254,7 @@ const closePopup = () =>{
               )}
             </div>
           </div>
+          }
 
           {status && (
             <p className={`${style.formStatus} ${style[status.type]}`}>

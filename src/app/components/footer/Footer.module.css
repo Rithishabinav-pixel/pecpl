@@ -151,10 +151,15 @@
 }
 
 
+
 /* responsive  */
 
 /* tablet  */
 @media screen and (max-width:1200px) {
+
+    .mobile_fixed_btn{
+    display: none;
+}
     
     .footerCertification{
     gap: 40px;
@@ -181,6 +186,18 @@
 
 /* mobile  */
 @media screen and (max-width:767px) {
+
+    .mobile_fixed_btn{
+        display: flex;
+    border-radius: 0;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    padding: 16px;
+    z-index: 9;
+}
 
     .menuColumn h3 button{
         display: block;

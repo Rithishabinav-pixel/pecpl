@@ -13,7 +13,7 @@ export default function Page() {
   const router = useRouter();
   const generateRandomNumber = () => Math.floor(Math.random() * 9) + 1;
 
-  const [inputTouch,setInputTouch] = useState(false)
+  const [inputTouch,setInputTouch] = useState(false);
 
   const generateCaptcha = () => {
     setCaptchaNumbers({
