@@ -76,7 +76,14 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" -L http://localhost:3000/career-thank-you)",
       "Bash(curl -sI http://localhost:3000/career-thank-you)",
       "Bash(curl -s -X POST http://localhost:3000/api/career/ -F 'name=Test Applicant' -F phone=9876543210 -F email=test@example.com -F location=Chennai -F 'message=Testing career form after position field removal' -F 'resume=@e:/Rithish/pecpl/test-resume.pdf;type=application/pdf' -w '\\\\nHTTP_STATUS:%{http_code}\\\\n')",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/admin/login/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/admin/login/)",
+      "Bash(xargs wc -l)",
+      "Bash(grep -oE '\\\\.[a-zA-Z_-]{4,40}\\(?=[ ,{]\\)' .next/static/chunks/0rqbo6j8zj0o0.css)",
+      "Bash(pkill -f \"next start\")",
+      "Bash(pkill -f \"node.*next\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:3000/ --max-time 2)",
+      "Bash(taskkill //PID 29112 //F)",
+      "Bash(nginx -v)"
     ],
     "additionalDirectories": [
       "e:\\Rithish\\pecpl\\src\\app\\admin\\enquiries",
