@@ -50,7 +50,7 @@ function escapeHtml(value) {
 }
 
 const SITE_URL = process.env.SITE_URL || "http://localhost:3000";
-const LOGO_URL = `${SITE_URL}/assets/images/logo.svg`;
+const LOGO_URL = `${SITE_URL}/assets/images/logo.png`;
 
 const FORM_TYPE_LABELS = {
   CONTACT: "Contact Form",
@@ -95,7 +95,7 @@ function renderEmailShell({ heading, preheader, rows }) {
 
             <tr>
               <td style="background-color:#002b3b;padding:28px 32px;text-align:left;">
-                <img src="${LOGO_URL}" alt="Precision Equipments" height="40" style="display:block;height:40px;width:auto;" />
+                <img src="${LOGO_URL}" alt="Precision Equipments" height="52" style="display:block;height:52;width:200;" />
               </td>
             </tr>
 
