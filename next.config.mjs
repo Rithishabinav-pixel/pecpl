@@ -40,11 +40,6 @@ const nextConfig = {
         destination: "/assets/pdf/cert8.pdf",
         permanent: true,
       },
-       {
-        source: "/pdf/NB_R_STAMP_CERTIFICATE.pdf",
-        destination: "/assets/pdf/cert4.pdf",
-        permanent: true,
-      },
         {
         source: "/pdf/iso-certificate.pdf",
         destination: "/assets/pdf/cert1.pdf",
