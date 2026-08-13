@@ -43,29 +43,38 @@ export default function RootLayout({ children }) {
 
   return (
     <html
-      lang="en"
-      data-scroll-behavior="smooth"
-      className={`${lato.variable} ${openSans.variable}`}
-    >
-      <GoogleTagManager gtmId="GTM-MDVV5KQ" />
-       <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-      <body>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MDVV5KQ"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-        <main><SiteChrome>{children}</SiteChrome></main>
-        </body>
-      <GoogleAnalytics gaId="G-F86RNNWHDP" />
-    </html>
+  lang="en"
+  data-scroll-behavior="smooth"
+  className={`${lato.variable} ${openSans.variable}`}
+>
+  <body>
+    <GoogleTagManager gtmId="GTM-MDVV5KQ" />
+
+    <GoogleAnalytics gaId="G-F86RNNWHDP" />
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(organizationSchema),
+      }}
+    />
+
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MDVV5KQ"
+        height="0"
+        width="0"
+        style={{
+          display: "none",
+          visibility: "hidden",
+        }}
+      />
+    </noscript>
+
+    <main>
+      <SiteChrome>{children}</SiteChrome>
+    </main>
+  </body>
+</html>
   );
 }
