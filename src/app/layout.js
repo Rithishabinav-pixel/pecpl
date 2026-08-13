@@ -27,6 +27,16 @@ export const metadata = {
   },
   };
 
+   const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PECPL",
+  "alternateName": "Precision Equipment Manufacture",
+  "url": "https://pecpl.com/",
+  "logo": "https://pecpl.com/assets/images/logo.svg",
+  "sameAs": "https://www.linkedin.com/company/shellandtubeheatexchangers/"
+  };
+
 export default function RootLayout({ children }) {
 
 
@@ -38,6 +48,12 @@ export default function RootLayout({ children }) {
       className={`${lato.variable} ${openSans.variable}`}
     >
       <GoogleTagManager gtmId="GTM-MDVV5KQ" />
+       <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       <body>
         <noscript>
           <iframe
