@@ -1,4 +1,4 @@
-const SITE_URL = process.env.SITE_URL || "http://localhost:3000";
+const SITE_URL = process.env.SITE_URL || "https://yourdomain.com";
 
 export default function robots() {
   return {
