@@ -16,7 +16,7 @@ export default function PreloadHeroImage() {
   preload("/assets/images/menu-arrow.svg", {
     as: "image",
     type: "image/svg+xml",
-    fetchPriority: "low",
+    fetchPriority: "high",
   });
 
   return null;
