@@ -169,7 +169,7 @@ export default function Page() {
       nextEl: ".custom_next",
     }}
     autoplay={{
-      delay: 3000,
+      delay: 6000,
       disableOnInteraction: false,
     }}
   >
