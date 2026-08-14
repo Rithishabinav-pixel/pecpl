@@ -49,10 +49,11 @@ const industriesData = [
         "image":"/assets/images/industries/chemical-industry-img.webp",
         "content": [
           "Chemicals are an essential part of everyday life, present in polymers & plastics, paints & coatings, battery materials, medicines, energy systems, construction materials, electronics, and many otherapplications. The chemical industry transforms raw materials such as oil, gas, minerals, water, and air into valuable products through controlled chemical and physical processes, supporting modern living and driving industrial growth.",
-          "Chemical plants operate on a large scale using advanced technologies and specialized equipment to ensure safe, efficient, and continuous production. Core operations include raw material handling, chemical reactions, separation, purification, and energy management. Heat transfer equipment such as heat exchangers, boilers, condensers, and cooling systems plays a critical role in maintaining process stability, safety, and efficiency."
+          "Chemical plants operate on a large scale using advanced technologies and specialized equipment to ensure safe, efficient, and continuous production. Core operations include raw material handling, chemical reactions, separation, purification, and energy management. Heat transfer equipment such as heat exchangers, boilers, condensers, and cooling systems plays a critical role in maintaining process stability, safety, and efficiency.",
+                    "Precision Equipments specializes in engineered process solutions, particularly Shell and Tube Heat Exchangers for the chemical industry. We supply equipment manufactured from titanium, non-ferrous alloys, and special stainless steel materials, specifically selected to withstand highly corrosive and demanding process conditions—ensuring reliability, durability, and performance excellence."
+
         ],
         "additionalText": [
-          "Precision Equipments specializes in engineered process solutions, particularly Shell and Tube Heat Exchangers for the chemical industry. We supply equipment manufactured from titanium, non-ferrous alloys, and special stainless steel materials, specifically selected to withstand highly corrosive and demanding process conditions—ensuring reliability, durability, and performance excellence."
         ]
       },
       {

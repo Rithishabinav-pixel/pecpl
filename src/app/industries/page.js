@@ -71,11 +71,18 @@ export default function page() {
         {industry.content?.length > 0 &&
           industry.content.map((para, i) => (
             <p key={i}>{para}</p>
-          ))}
-
-  
+          ))}  
 
       </div>
+
+        {industry.additionalText?.length > 0 && (
+  <div className={style.additionalText}>
+    {industry.additionalText.map((text, i) => (
+      <p key={`additional-${i}`}>{text}</p>
+    ))}
+   
+  </div>
+)}
 
 
     </div>

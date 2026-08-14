@@ -237,7 +237,9 @@ gap: 20px
 
 @media screen and (max-width:1200px) {
 
- 
+ .products_section .container .additionalText{
+    margin-top: 0;
+ }
 
 .products_section .container .image,
 .products_section .container .content{
