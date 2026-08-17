@@ -2,6 +2,7 @@
 const nextConfig = {
   reactCompiler: true,
   trailingSlash: true,
+  poweredByHeader: false,
 
   async redirects() {
     return [
@@ -110,41 +111,30 @@ async headers() {
             "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()",
         },
         {
+          key: "Cross-Origin-Opener-Policy",
+          value: "same-origin",
+        },
+        {
           key: "Content-Security-Policy",
           value: [
             "default-src 'self'",
-
-            // Next.js + GTM + Google Analytics
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com",
-
-            // Google Fonts + Next.js inline styles
+            // unsafe-eval intentionally omitted (nothing in this app or its
+            // dependencies needs it in production). unsafe-inline is kept
+            // because Next.js's own App Router hydration payload is inline,
+            // per-page, per-build script content with no nonce/hash we can
+            // statically pin ahead of time — see src/proxy.js for why a
+            // nonce-based policy isn't used here (it would force every page
+            // into dynamic rendering).
+            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com",
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-
-            // Google Fonts
             "font-src 'self' https://fonts.gstatic.com data:",
-
-            // Images/CDN/external images
             "img-src 'self' data: blob: https:",
-
-            // APIs + Google Analytics + GTM
             "connect-src 'self' https: wss:",
-
-            // Google/YouTube embeds
             "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com",
-
-            // No browser plugins
             "object-src 'none'",
-
-            // Prevent base-tag injection
             "base-uri 'self'",
-
-            // Forms
             "form-action 'self'",
-
-            // Prevent other websites framing your site
             "frame-ancestors 'self'",
-
-            // Upgrade HTTP resources to HTTPS
             "upgrade-insecure-requests",
           ].join("; "),
         },
@@ -152,7 +142,6 @@ async headers() {
     },
   ];
 },
-
 
 
 
