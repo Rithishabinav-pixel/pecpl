@@ -315,6 +315,7 @@ export default function page() {
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
+              {errors.message && <p className={style.fieldError}>{errors.message}</p>}
             </div>
 
             {inputTouch && 
