@@ -261,7 +261,15 @@ export default function Page() {
                 type="text"
                 name="name"
                 value={formData.name}
-                onChange={handleChange}
+                onChange={(e) => {
+    const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+    handleChange({
+      target: {
+        name: "name",
+        value,
+      },
+    });
+  }}
               />
               {errors.name && <p className={style.fieldError}>{errors.name}</p>}
             </div>
@@ -298,7 +306,15 @@ export default function Page() {
                 type="text"
                 name="location"
                 value={formData.location}
-                onChange={handleChange}
+                  onChange={(e) => {
+    const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+    handleChange({
+      target: {
+        name: "location",
+        value,
+      },
+    });
+  }}
               />
               {errors.location && <p className={style.fieldError}>{errors.location}</p>}
             </div>

@@ -241,13 +241,21 @@ export default function page() {
           <form onSubmit={handleSubmit}>
             <div className={style.formControl}>
               <label htmlFor="career-name">Name</label>
-              <input
-                id="career-name"
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-              />
+             <input
+  id="career-name"
+  type="text"
+  name="name"
+  value={formData.name}
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+    handleChange({
+      target: {
+        name: "name",
+        value,
+      },
+    });
+  }}
+/>
               {errors.name && <p className={style.fieldError}>{errors.name}</p>}
             </div>
 
@@ -278,13 +286,21 @@ export default function page() {
 
             <div className={style.formControl}>
               <label htmlFor="career-location">Your Location</label>
-              <input
-                id="career-location"
-                type="text"
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-              />
+             <input
+  id="career-location"
+  type="text"
+  name="location"
+  value={formData.location}
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^\p{L}\s,-]/gu, "");
+    handleChange({
+      target: {
+        name: "location",
+        value,
+      },
+    });
+  }}
+/>
               {errors.location && <p className={style.fieldError}>{errors.location}</p>}
             </div>
 

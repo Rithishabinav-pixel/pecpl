@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const isDev = process.env.NODE_ENV === "development";
+
 const nextConfig = {
   reactCompiler: true,
   trailingSlash: true,
@@ -84,64 +87,61 @@ const nextConfig = {
     ];
   },
 
-async headers() {
-  return [
-    {
-      source: "/(.*)",
-      headers: [
-        {
-          key: "Strict-Transport-Security",
-          value: "max-age=31536000; includeSubDomains",
-        },
-        {
-          key: "X-Content-Type-Options",
-          value: "nosniff",
-        },
-        {
-          key: "X-Frame-Options",
-          value: "SAMEORIGIN",
-        },
-        {
-          key: "Referrer-Policy",
-          value: "strict-origin-when-cross-origin",
-        },
-        {
-          key: "Permissions-Policy",
-          value:
-            "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()",
-        },
-        {
-          key: "Cross-Origin-Opener-Policy",
-          value: "same-origin",
-        },
-        {
-          key: "Content-Security-Policy",
-          value: [
-            "default-src 'self'",
-            // unsafe-eval intentionally omitted (nothing in this app or its
-            // dependencies needs it in production). unsafe-inline is kept
-            // because Next.js's own App Router hydration payload is inline,
-            // per-page, per-build script content with no nonce/hash we can
-            // statically pin ahead of time — see src/proxy.js for why a
-            // nonce-based policy isn't used here (it would force every page
-            // into dynamic rendering).
-            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com",
-            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-            "font-src 'self' https://fonts.gstatic.com data:",
-            "img-src 'self' data: blob: https:",
-            "connect-src 'self' https: wss:",
-            "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com",
-            "object-src 'none'",
-            "base-uri 'self'",
-            "form-action 'self'",
-            "frame-ancestors 'self'",
-            "upgrade-insecure-requests",
-          ].join("; "),
-        },
-      ],
-    },
-  ];
-},
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value:
+              "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()",
+          },
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
+          },
+          {
+            key: "Content-Security-Policy",
+            value: [
+              "default-src 'self'",
+
+              `script-src 'self' 'unsafe-inline' ${
+                isDev ? "'unsafe-eval'" : ""
+              } https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com`,
+
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "font-src 'self' https://fonts.gstatic.com data:",
+              "img-src 'self' data: blob: https:",
+              "connect-src 'self' https: wss:",
+              "frame-src 'self' https://www.googletagmanager.com https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "frame-ancestors 'self'",
+              "upgrade-insecure-requests",
+            ].join("; "),
+          },
+        ],
+      },
+    ];
+  },
 
 
 

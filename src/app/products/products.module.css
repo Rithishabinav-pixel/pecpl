@@ -66,6 +66,12 @@
     width: calc(50% - 40px);
 }
 
+.products_section .container .content p,
+.products_section .container .additionalText p,
+.overviewSection p{
+    text-align: justify;
+}
+
 .products_section .container .additionalText{
     width: 100%;
     margin-top: 20px;

@@ -231,6 +231,12 @@ gap: 20px
   transform: scaleX(-1);
 }
 
+.products_section .container .content p,
+.products_section .container .additionalText p,
+.overviewSection p{
+    text-align: justify;
+}
+
 /* responsive  */
 
 /* tablet  */
