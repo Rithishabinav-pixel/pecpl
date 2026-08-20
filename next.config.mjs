@@ -123,9 +123,9 @@ const nextConfig = {
               "default-src 'self'",
 
               `script-src 'self' 'unsafe-inline' ${
-                isDev ? "'unsafe-eval'" : ""
-              } https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com`,
-
+  isDev ? "'unsafe-eval'" : ""
+} https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.gstatic.com https://www.clarity.ms https://app.factors.ai`,
+ 
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: blob: https:",
