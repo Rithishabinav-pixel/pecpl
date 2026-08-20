@@ -1,4 +1,3 @@
-import prisma from "@/lib/prisma";
 import { validateEnquiryForm } from "@/lib/validation";
 import { sendMail, buildEnquiryEmail } from "@/lib/mailer";
 
@@ -25,25 +24,27 @@ export async function POST(request) {
   }
 
   try {
-    const enquiry = await prisma.contactEnquiry.create({
-      data: {
+    if (process.env.MAIL_TO) {
+      const { subject, html } = buildEnquiryEmail({
         name: name.trim(),
         phone: phone.trim(),
         email: email.trim(),
         location: location.trim(),
         message: message?.trim() ? message.trim() : null,
         formType,
-      },
-    });
+        createdAt: new Date(),
+      });
 
-    if (process.env.MAIL_TO) {
-      const { subject, html } = buildEnquiryEmail(enquiry);
-      await sendMail({ to: process.env.MAIL_TO, subject, html });
+      const result = await sendMail({ to: process.env.MAIL_TO, subject, html });
+
+      if (!result.ok) {
+        return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });
+      }
     }
 
     return Response.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Failed to save enquiry:", error);
+    console.error("Failed to send enquiry email:", error);
     return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 }

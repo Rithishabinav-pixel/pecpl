@@ -1,4 +1,3 @@
-import prisma from "@/lib/prisma";
 import { validateNewsletterEmail } from "@/lib/validation";
 import { sendMail, buildNewsletterEmail } from "@/lib/mailer";
 
@@ -20,29 +19,22 @@ export async function POST(request) {
   const trimmedEmail = email.trim();
 
   try {
-    const existing = await prisma.newsletterSubscription.findUnique({
-      where: { email: trimmedEmail },
-    });
-
-    if (existing) {
-      return Response.json(
-        { success: true, message: "You're already subscribed." },
-        { status: 200 }
-      );
-    }
-
-    const subscription = await prisma.newsletterSubscription.create({
-      data: { email: trimmedEmail },
-    });
-
     if (process.env.MAIL_TO) {
-      const { subject, html } = buildNewsletterEmail(subscription);
-      await sendMail({ to: process.env.MAIL_TO, subject, html });
+      const { subject, html } = buildNewsletterEmail({
+        email: trimmedEmail,
+        createdAt: new Date(),
+      });
+
+      const result = await sendMail({ to: process.env.MAIL_TO, subject, html });
+
+      if (!result.ok) {
+        return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });
+      }
     }
 
     return Response.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Failed to save newsletter subscription:", error);
+    console.error("Failed to send newsletter email:", error);
     return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 }

@@ -19,13 +19,14 @@ function getTransporter() {
   return transporter;
 }
 
-export async function sendMail({ to, subject, html }) {
+export async function sendMail({ to, subject, html, attachments }) {
   try {
     await getTransporter().sendMail({
       from: process.env.SMTP_FROM,
       to,
       subject,
       html,
+      attachments,
     });
     return { ok: true };
   } catch (error) {
@@ -167,7 +168,7 @@ export function buildCareerApplicationEmail({ name, phone, email, location, mess
       { label: "Email", value: email },
       { label: "Location", value: location },
       { label: "Message", value: message || "-" },
-      { label: "Resume", value: resumeName ? `${resumeName} (attached in admin panel)` : "-" },
+      { label: "Resume", value: resumeName ? `${resumeName} (attached to this email)` : "-" },
       { label: "Submitted", value: formatDateTime(createdAt) },
     ],
   });

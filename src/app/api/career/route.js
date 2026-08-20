@@ -1,7 +1,5 @@
-import prisma from "@/lib/prisma";
 import { validateCareerForm, validateResumeFile } from "@/lib/validation";
 import { sendMail, buildCareerApplicationEmail } from "@/lib/mailer";
-import { saveResumeFile } from "@/lib/resumeStorage";
 
 export async function POST(request) {
   let formData;
@@ -28,28 +26,34 @@ export async function POST(request) {
   }
 
   try {
-    const { resumePath, resumeName } = await saveResumeFile(resume);
+    if (process.env.MAIL_TO) {
+      const resumeBuffer = Buffer.from(await resume.arrayBuffer());
 
-    const application = await prisma.careerApplication.create({
-      data: {
+      const { subject, html } = buildCareerApplicationEmail({
         name: name.trim(),
         phone: phone.trim(),
         email: email.trim(),
         location: location.trim(),
         message: message?.trim() ? message.trim() : null,
-        resumePath,
-        resumeName,
-      },
-    });
+        resumeName: resume.name,
+        createdAt: new Date(),
+      });
 
-    if (process.env.MAIL_TO) {
-      const { subject, html } = buildCareerApplicationEmail(application);
-      await sendMail({ to: process.env.MAIL_TO, subject, html });
+      const result = await sendMail({
+        to: process.env.MAIL_TO,
+        subject,
+        html,
+        attachments: [{ filename: resume.name, content: resumeBuffer }],
+      });
+
+      if (!result.ok) {
+        return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });
+      }
     }
 
     return Response.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Failed to save career application:", error);
+    console.error("Failed to send career application email:", error);
     return Response.json({ error: "Something went wrong. Please try again." }, { status: 500 });
   }
 }

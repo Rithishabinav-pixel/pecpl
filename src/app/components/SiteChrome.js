@@ -10,7 +10,6 @@ import FooterCTA from "./ui/FooterCTA";
 
 export default function SiteChrome({ children }) {
   const pathname = usePathname();
-  const isAdmin = pathname?.startsWith("/admin");
 
   useEffect(() => {
     AOS.init({
@@ -24,10 +23,6 @@ export default function SiteChrome({ children }) {
   useEffect(() => {
     AOS.refresh();
   }, [pathname]);
-
-  if (isAdmin) {
-    return <>{children}</>;
-  }
 
   return (
     <>
