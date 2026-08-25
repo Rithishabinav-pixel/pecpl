@@ -1,6 +1,15 @@
 const newsLetterData = [
   {
-    "id": 1,
+    "id": 9,
+    "title": "PECPL Rod Baffle Heat Exchangers: Novolen & Scientific...",
+    "slug": "pecpl-rod-baffle-heat-exchangers-novolen-scientific",
+    "date": "Aug 26",
+    "image": "/assets/images/newsletter/rod-baffles-aug26.png",
+    "pdf": "/assets/pdf/newsletter/rod_baffle_aug2026.pdf",
+    "audio": "/assets/audio/rod-baffles-aug26.mp3"
+  },
+  {
+    "id": 8,
     "title": "Performance Enhancement of Heat Exchanger Tube by...",
     "slug": "performance-enhancement-of-heat-exchanger-tube-by",
     "date": "May 26",
@@ -9,7 +18,7 @@ const newsLetterData = [
     "audio": "/assets/audio/PE-Newsletter-Apr-2026.mp3"
   },
   {
-    "id": 2,
+    "id": 7,
     "title": "Transforming Heat Exchanger Performance in Refineries",
     "slug": "transforming-heat-exchanger-performance-in-refineries",
     "date": "Nov 25",
@@ -18,7 +27,7 @@ const newsLetterData = [
     "audio": "/assets/audio/TransformingHeatExchanger.mp3"
   },
   {
-    "id": 3,
+    "id": 6,
     "title": "Procedure Qualification of Grade 5 Welds with LAS",
     "slug": "procedure-qualification-of-grade-5-welds-with-las",
     "date": "July 25",
@@ -27,7 +36,7 @@ const newsLetterData = [
     "audio": "/assets/audio/pecpl-newsletter-july-2025.mp3"
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Fabrication of Critical Heat Exchangers Involving Ferric",
     "slug": "fabrication-of-critical-heat-exchangers-involving-ferric",
     "date": "Jan 25",
@@ -45,7 +54,7 @@ const newsLetterData = [
     "audio": "/assets/audio/CO2-Reducion-Solutions.mp3"
   },
   {
-    "id": 6,
+    "id": 4,
     "title": "Grade 9 Pressure Vessel",
     "slug": "grade-9-pressure-vessel",
     "date": "Jul 24",
@@ -54,7 +63,7 @@ const newsLetterData = [
     "audio": "/assets/audio/Grade9-Pressure-Vessel.ogg"
   },
   {
-    "id": 7,
+    "id": 3,
     "title": "Shell and Tube Heat Exchangers",
     "slug": "shell-and-tube-heat-exchangers",
     "date": "May 21",
@@ -63,7 +72,7 @@ const newsLetterData = [
     "audio": "/assets/audio/newsletter-may-2021.mp3"
   },
   {
-    "id": 8,
+    "id": 2,
     "title": "Rod Baffle Heat Exchangers",
     "slug": "rod-baffle-heat-exchangers",
     "date": "Sept 20",
@@ -72,7 +81,7 @@ const newsLetterData = [
     "audio": "/assets/audio/rod_baffle.mp3"
   },
   {
-    "id": 9,
+    "id": 1,
     "title": "Expansion Bellows in Shell & Tube Heat Exchangers",
     "slug": "expansion-bellows-in-shell-tube-heat-exchangers",
     "date": "Apr 20",
