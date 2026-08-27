@@ -121,7 +121,7 @@ function renderEmailShell({ heading, preheader, rows }) {
                   Unit-1: B-70/1, SIPCOT Industrial Park, Thandalam, Irungattukottai, Chennai-602 105, India.
                 </p>
                 <p style="margin:0;font:400 12px/1.6 Arial,Helvetica,sans-serif;color:#5b6b73;">
-                  Phone: +91 44 - 4710 0603 &nbsp;|&nbsp; Email: sales@pecpl.com
+                  Phone: +91 44 - 4710 0603 &nbsp;|&nbsp; Email: mktg@pecpl.com
                 </p>
                 <p style="margin:16px 0 0;font:400 11px/1.6 Arial,Helvetica,sans-serif;color:#98a4aa;">
                   &copy; ${new Date().getFullYear()} Precision Equipments (Chennai) Pvt Ltd. All Rights Reserved.

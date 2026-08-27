@@ -163,7 +163,7 @@ export default function Page() {
 
                 <div className={style.detail}>
                   <h3>Mail Us</h3>
-                  <a href="mailto:sales@pecpl.com">sales@pecpl.com</a>
+                  <a href="mailto:mktg@pecpl.com">mktg@pecpl.com</a>
                 </div>
               </div>
 

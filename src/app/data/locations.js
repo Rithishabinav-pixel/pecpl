@@ -5,7 +5,7 @@ const locations = {
       "name": "UNIT - 1 (Registered Office)",
       "company": "Precision Equipments Chennai Pvt. Ltd.",
       "address": "B-70/1, SIPCOT Industrial Park, Thandalam, Irungattukottai, Chennai – 602105, Tamil Nadu, India",
-      "email": "sales@pecpl.com",
+      "email": "mktg@pecpl.com",
       "phones": [
         "+91 44 4710 0603",
         "+91 98848 90117"
@@ -20,7 +20,7 @@ const locations = {
       "name": "UNIT - 2",
       "company": "Precision Equipments Chennai Pvt. Ltd.",
       "address": "No.126, S.No.1364/2A, Perambakkam Main Road, Usain Nagar, Mappedu, Tiruvallur – 631402, Tamil Nadu, India",
-      "email": "sales@pecpl.com",
+      "email": "mktg@pecpl.com",
       "phones": [
         "+91 44 4710 0603",
         "+91 98848 90117"
@@ -37,7 +37,7 @@ const locations = {
       "country": "USA",
       "company": "Precision Equipments Americas, Inc.",
       "address": "815, Brazos St., Ste. 500, Austin, Texas 78701, USA",
-      "email": "sales@pecpl.com",
+      "email": "mktg@pecpl.com",
       "phones": [],
       "fax": null,
       "website": null,
@@ -49,7 +49,7 @@ const locations = {
       "country": "Canada",
       "company": "Precision Equipments (Canada) Ltd.",
       "address": "209-2920 Calgary Trail NW, Edmonton, Alberta, T6J 2G8, Canada",
-      "email": "sales@pecpl.com",
+      "email": "mktg@pecpl.com",
       "phones": [],
       "fax": null,
       "website": null,

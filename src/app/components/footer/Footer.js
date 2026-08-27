@@ -134,7 +134,7 @@ export default function Footer() {
                 </ul>
                 <ul className={style.contactDetails}>
                     <li> <a href="tel:+91444710 0603"> <Image src="/assets/images/call.svg" width={24} height={24} alt=''/>+91 44 - 4710 0603 </a>  </li>
-                    <li> <a href="mailto:sales@pecpl.com"> <Image src="/assets/images/sms.svg" width={24} height={24} alt=''/>sales@pecpl.com</a>  </li>
+                    <li> <a href="mailto:mktg@pecpl.com"> <Image src="/assets/images/sms.svg" width={24} height={24} alt=''/>mktg@pecpl.com</a>  </li>
                     <li> <a href="https://share.google/yfK9PA775Osk85qcO" target='_blank'> <Image src="/assets/images/location.svg" width={24} height={24} alt=''/>Unit-1: B-70/1,<br/>
 SIPCOT Industrial Park,<br/>
 Thandalam, Irungattukottai,<br/>
