@@ -85,7 +85,7 @@ const mapData=[
     "name": "Mousa A Bahman EST",
     "address": "Canada Dry Street, Near Hadidco, Shuwaikh, P.O. Box 24218, Safat 13103, Kuwait",
     "phone": "+965 24835468",
-    "email": "sales@pecpl.com"
+    "email": "mktg@pecpl.com"
   },
   {
     "id": 4,
@@ -99,14 +99,14 @@ const mapData=[
     "name": "Alwazan Trading",
     "address": "P.O. Box: 3994, Corniche Road, Abu Dhabi, United Arab Emirates",
     "phone": "+971-2-6223200/400, +971-50-4456986",
-    "email": "sales@pecpl.com"
+    "email": "mktg@pecpl.com"
   },
   {
     "id": 6,
     "name": "Pesrovision International LLC",
     "address": "P.O. Box: 391, Postal Code: 320, Barka, Sultanate of Oman.",
     "phone": "+968 24482137",
-    "email": "sales@pecpl.com"
+    "email": "mktg@pecpl.com"
   },
   {
     "id": 7,
@@ -120,7 +120,7 @@ const mapData=[
     "name": "Plasma Pacific Sdn Bhd",
     "address": "No. 19, Jalan SBC 6, Taman Sri Batu Caves, 68100 Batu Caves, Selangor, Malaysia",
     "phone": "+60 176112556",
-    "email": "sales@pecpl.com"
+    "email": "mktg@pecpl.com"
   }
 ]
 
