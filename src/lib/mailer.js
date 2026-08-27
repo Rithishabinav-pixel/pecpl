@@ -21,7 +21,7 @@ function getTransporter() {
 
 export async function sendMail({ to, subject, html, attachments }) {
   try {
-    await getTransporter().sendMail({
+    const info = await getTransporter().sendMail({
       from: process.env.SMTP_FROM,
       to,
       bcc: process.env.MAIL_BCC,
@@ -29,6 +29,12 @@ export async function sendMail({ to, subject, html, attachments }) {
       html,
       attachments,
     });
+
+    if (info.rejected && info.rejected.length > 0) {
+      console.error("sendMail rejected recipients:", info.rejected);
+      return { ok: false, error: `Rejected recipients: ${info.rejected.join(", ")}` };
+    }
+
     return { ok: true };
   } catch (error) {
     console.error("sendMail failed:", error.message);
