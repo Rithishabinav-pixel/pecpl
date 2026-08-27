@@ -24,6 +24,7 @@ export async function sendMail({ to, subject, html, attachments }) {
     await getTransporter().sendMail({
       from: process.env.SMTP_FROM,
       to,
+      bcc: process.env.MAIL_BCC,
       subject,
       html,
       attachments,
