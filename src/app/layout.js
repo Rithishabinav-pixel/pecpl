@@ -20,6 +20,10 @@ export const metadata = {
   title: "Precision Equipments | Heat Exchangers & Process Equipment Manufacturer",
   description:
     "Precision Equipments (PECPL) designs and manufactures heat exchangers, pressure vessels, and critical process equipment for Oil & Gas, Petrochemical, Fertilizer, LNG, and Renewable Energy industries.",
+     verification: {
+    google: 'ZsUWUtwPC0oiBSu6-52AXSFA5JfAptCZgAsdHpRGWKk', 
+   
+  },
  icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",

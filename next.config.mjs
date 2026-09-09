@@ -3,6 +3,12 @@
 const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig = {
+
+    experimental: {
+    inlineCss: true, // Automatically inlines critical CSS to stop render-blocking
+  },
+
+  
   reactCompiler: true,
   trailingSlash: true,
   poweredByHeader: false,
