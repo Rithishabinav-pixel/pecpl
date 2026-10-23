@@ -1,5 +1,5 @@
 .heroSection{
-    background-image: url('/assets/images/engineering-bnr-n.jpg');
+    background-image: url('/assets/images/engineering-bnr-n-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,14 +72,14 @@ z-index: 2;
 
 .productSection .content ul li,
 .splitContainer .content .pointsCard .card ul li,
-.materialsCards .card ul li{
+.materialsCards .card ul li, .customizeList li{
     position: relative;
     padding-left: 32px;
 }
 
 .productSection .content ul li::before,
 .splitContainer .content .pointsCard .card ul li::before,
-.materialsCards .card ul li::before{
+.materialsCards .card ul li::before, .customizeList li::before{
      position: absolute;
     content: '';
     left: 0;
@@ -90,7 +90,11 @@ z-index: 2;
     background-size: cover;
 }
 
-.materialsCards .card ul li::before{
+.customizeList li {
+    margin-bottom: 8px;
+}
+
+.materialsCards .card ul li::before, .customizeList li::before{
     background-image: url('/assets/images/check-tick-dark-blue.svg');
 
 }
@@ -228,11 +232,55 @@ border-radius: 8px;
     border-radius: 8px;
 }
 
+.textCenter {
+   text-align: center;
+}
+
+.thermalContainer .image,
+.thermalContainer .content{
+    width: calc(50% - 50px);
+}
+
+.thermalContainer {
+    gap: 100px;
+}
+
+.thermalContainer, .thermalContainer .content {
+    display: flex;
+}
+.thermalContainer .content {
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+}
+.thermalContainer .image img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.text_justify{
+    text-align: justify;
+}
+
 
 /* responsive  */
 
 /* tablet  */
 @media screen and (max-width:1200px){
+
+    .thermalContainer{
+    gap: 30px;
+    flex-direction: column-reverse;
+}
+
+ .thermalContainer .content{
+    gap: 16px;
+}
+
+.thermalContainer .image,
+.thermalContainer .content{
+    width: 100%;
+}
 
 .softwareCards{
     gap: 20px;
@@ -291,6 +339,9 @@ padding: 20px;
     .splitContainer{
    flex-direction: column-reverse;
    gap: 30px;
+}
+.splitContainer.flexColumn{
+    flex-direction: column;
 }
 
 .productSection .content{

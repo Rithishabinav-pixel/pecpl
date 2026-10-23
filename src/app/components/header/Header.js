@@ -267,6 +267,7 @@ const handleNavLinkClick = (e) => {
         {mobile &&  <button type="button" onClick={handleSubmenuToggle(['capability'])} aria-expanded={isMenuActive(['capability'])} aria-label="Toggle Capability submenu" className={`${style.viewMore}`}> <Image src="/assets/images/plus-icon.svg" width={24} height={24} alt=''/> </button> }
          <ul className={style.subMenu}>
           <li> <Link href="/engineering">Engineering</Link> </li>
+          <li> <Link href="/global-sourcing">Global Sourcing</Link> </li>
           <li> <Link href="/manufacturing-facilities-machinery">Manufacturing</Link> </li>
           <li> <Link href="/logistics">Logistics</Link> </li>
          </ul>
