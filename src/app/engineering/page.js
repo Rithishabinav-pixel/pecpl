@@ -283,7 +283,7 @@ export default function page() {
 
 
       {/* Software Cards */}
-    <section className={`${style.softwareCardsSection} no_padding_tops`}>
+    {/* <section className={`${style.softwareCardsSection} no_padding_tops`}>
           <div className={`container section_container ${style.softwareCardsContainer}`}>
 
   <div className={`top_content center ${style.top_content}`}>
@@ -315,11 +315,11 @@ export default function page() {
 
 
           </div>
-    </section>
+    </section> */}
 
 
      {/* Materials Cards */}
-    <section className={`${style.materialsCardsSection} no_padding_top`}>
+    <section className={`${style.materialsCardsSection} no_padding_tops`}>
           <div className={`container section_container ${style.materialsCardsContainer}`}>
 
   <div className={`top_content center ${style.top_content}`}>
