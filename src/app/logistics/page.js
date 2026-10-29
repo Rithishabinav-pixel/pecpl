@@ -53,21 +53,17 @@ export default function page() {
 
       {/* Software Cards */}
     <section className={`${style.softwareCardsSection} gray_section `}>
-          <div className={`container section_container ${style.softwareCardsContainer}`}>
+          <div className={`container ${style.splitContainer}`}>
 
-  <div className={`top_content center ${style.top_content}`}>
-          <h2 className="common_heading heading" data-aos="fade-up" data-aos-delay="0">Sea</h2>
-          <p className={style.text_justify} data-aos="fade-up" data-aos-delay="100">Located approximately 45 km from Chennai Sea Port, our facility benefits from excellent highway connectivity, enabling efficient and reliable transportation of heavy and oversized equipment to the port. Depending on the weight, dimensions, and transportation requirements of each equipment, we deploy suitable logistics solutions, including mechanical trailers and multi-axle hydraulic trailers, ensuring safe and controlled movement. For export shipments, sailing schedules and vessel coordination are critical to meeting delivery commitments. To manage these requirements effectively, we have a dedicated export logistics team responsible for shipment planning, port coordination, documentation, vessel scheduling, cargo handling, and continuous tracking.</p>
-        </div>
+          <div className={style.image} data-aos="fade-right" data-aos-delay="0">
+              <Image src="/assets/images/sea-img.webp" width={1078} height={626} alt='Sea freight shipment 1' />
+            </div>
 
-   <div className={style.seaCards}>
-    <div className={style.card} data-aos="fade-up" data-aos-delay="0">
-        <Image src="/assets/images/sea-img.webp" width={1078} height={626} alt='Sea freight shipment 1' />
-    </div>
-    {/* <div className={style.card} data-aos="fade-left" data-aos-delay="0">
-        <Image src="/assets/images/sea-img-2.webp" width={700} height={642} alt='Sea freight shipment 2' />
-    </div> */}
-   </div>
+            <div className={style.content}>
+                <h2 className='heading common_heading' data-aos="fade-up">Sea</h2>
+                <p className={style.text_justify} data-aos="fade-up" data-aos-delay="100">Located approximately 45 km from Chennai Sea Port, our facility benefits from excellent highway connectivity, enabling efficient and reliable transportation of heavy and oversized equipment to the port. Depending on the weight, dimensions, and transportation requirements of each equipment, we deploy suitable logistics solutions, including mechanical trailers and multi-axle hydraulic trailers, ensuring safe and controlled movement. For export shipments, sailing schedules and vessel coordination are critical to meeting delivery commitments. To manage these requirements effectively, we have a dedicated export logistics team responsible for shipment planning, port coordination, documentation, vessel scheduling, cargo handling, and continuous tracking.</p>
+            </div>
+
           </div>
     </section>
 
@@ -101,14 +97,16 @@ export default function page() {
 
           <div className={`container ${style.splitContainer}`}>
 
-            <div className={style.image} data-aos="fade-right" data-aos-delay="0">
-              <Image src="/assets/images/air-img.webp" width={916} height={576} alt='Air'/> 
-             </div>
-
-            <div className={style.content}>
+          <div className={style.content}>
                 <h2 className='heading common_heading' data-aos="fade-up">Air</h2>
                 <p className={style.text_justify} data-aos="fade-up" data-aos-delay="100">When project schedules demand speed, we also provide air freight solutions for critical and time-sensitive equipment. Based on customer requirements, we have successfully executed air shipments, including the transportation of complete heat exchanger assemblies and tube bundles to international destinations. With an international airport located approximately 25 km from our facility, we are strategically positioned to support rapid air cargo movements. Our experienced logistics team manages the complete process, including shipment planning, cargo handling, documentation, coordination with freight forwarders, and airport operations. Our proven experience in air freight enables us to respond quickly to urgent project requirements, helping customers minimize transportation lead times and maintain production schedules.</p>
             </div>
+
+            <div className={style.image} data-aos="fade-left" data-aos-delay="0">
+              <Image src="/assets/images/air-img.webp" width={916} height={576} alt='Air'/> 
+             </div>
+
+            
 
           </div>
 
