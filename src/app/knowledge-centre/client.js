@@ -50,7 +50,7 @@ export default function page() {
                 
                 <p>Our knowledge centre is your go-to source for engineering knowledge. Dive into expert articles, project highlights, and industry trends that reflect our commitment to continuous learning and innovation in process equipment.</p>
         </div>
-    </section>
+    </section> 
    
 
    {/* newsletter section  */}

@@ -1,5 +1,14 @@
 const newsLetterData = [
   {
+    "id": 10,
+    "title": "Submerged Arc Welding Procedure For 5Cr-0.5Mo...", 
+    "slug": "submerged-arc-welding-procedure",
+    "date": "Oct 26",
+    "image": "/assets/images/newsletter/submerged-arc-welding-img.webp",
+    "pdf": "/assets/pdf/newsletter/achieving_low_temperature_toughness.pdf",
+    "audio": "/assets/audio/submerged_arc_welding_audio.mp3"
+  },
+  {
     "id": 9,
     "title": "PECPL Rod Baffle Heat Exchangers: Novolen & Scientific...",
     "slug": "pecpl-rod-baffle-heat-exchangers-novolen-scientific",
