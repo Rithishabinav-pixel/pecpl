@@ -140,6 +140,10 @@ const productsData = [
           "image": "/assets/images/products/shell-and-tube-heat-exchangers/rod5.webp",
           "text": "Baffle Arrangements"
         },
+         {
+          "image": "/assets/images/products/shell-and-tube-heat-exchangers/rod6.webp",
+          "text": "RG Condenser"
+        },
       ],
       "content": [
         "A rod baffle heat exchanger is a specialized type of shell-and-tube heat exchanger in which conventional solid plate baffles are replaced with a system of longitudinal rod grids extending along the entire shell length. This innovative configuration significantly reduces shell-side pressure drop while minimizing stagnant or dead-flow zones within the tube bundle. The rod grids are arranged in an alternating pattern to provide uniform tube support, ensuring effective flow distribution and superior resistance to flow-induced vibration.",
